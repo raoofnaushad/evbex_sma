@@ -46,7 +46,7 @@ def unsubs():
     newses = get_data_from_mongo(str(date.today()))
     mail = request.form['mail']
     remove_subscribers(mail)
-    return render_template("index_new.html", newses = newses[:10], subs = 1)
+    return render_template("index_new.html", newses = newses[:10], subs = -1)
 
 
 if(__name__ == "__main__"):

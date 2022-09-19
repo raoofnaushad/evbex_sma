@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evbex Newsletter</title>
-    <link rel="icon" href="../static/icons/evbex-logo.svg" type="image/x-icon"/>
+    <link rel="icon" href="../static/images/logo-10.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body id="theBody">
     <div class="toppest-element"></div>
     <div class="navbar">
         <div class="primary-navbar">
-            <a href=""><img src="../static/icons/evbex-logo.svg" alt="Evbex" class="logo"></a>
+            <a href="/"><img src="../static/icons/evbex-logo.svg" alt="Evbex" class="logo"></a>
             <div class="navbar-buttons">
                 <button class="our-services">
                     Services
@@ -274,6 +274,17 @@
             <button style="border: none; background: transparent;" onclick="closeSuccessNoti()"><img src="../static/icons/close-btn.svg" alt="X" class="success-close-btn"></button>
         </div>
     </div>
+    {% elif subs==-1 %}
+    <div class="success-message">
+        <div class="left-part">
+            <img src="../static/icons/success.svg" alt="success" class="success">
+        </div>
+        <div class="right-part">
+            <p class="success-title">Success!!</p>
+            <p class="success-content">Your subscription has been deleted. You will not be receiving our daily updates!</p>
+            <button style="border: none; background: transparent;" onclick="closeSuccessNoti()"><img src="../static/icons/close-btn.svg" alt="X" class="success-close-btn"></button>
+        </div>
+    </div>
     {% endif %}
     <div class="unsubscribe-popup subscribe-popup">
         <div class="popup-container">
@@ -281,7 +292,7 @@
                 <h2 class="main-title">Unsubscribe Newsletter</h2>
                 <h3 class="sub-title">You can subscribe again anytime later!!</h3>
             </div>
-            <form action="/subscribe" method="post">
+            <form action="/unsubscribe" method="post">
                 <div class="popup-body">
                     <div class="input-box">
                         <p class="box-title">Enter your subscribed Mail Id</p>
@@ -291,8 +302,8 @@
                     <p class="box-title error" style="font-weight:600;">*Invalid Mail Id</p>
                 </div>
                 <div class="popup-actions">
-                    <button class="cancel-btn subscribe" onclick="hideUnsubscribePopup()">Cancel</button>
-                    <button class="subscribe subscribe-on-popup">Unsubscribe</button>
+                    <button type="button" class="cancel-btn subscribe" onclick="hideUnsubscribePopup()">Cancel</button>
+                    <button type="submit" class="subscribe subscribe-on-popup">Unsubscribe</button>
                 </div>
             </form>
         </div>
