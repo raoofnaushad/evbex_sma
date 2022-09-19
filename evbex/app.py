@@ -12,7 +12,7 @@ def home():
     newses = get_data_from_mongo(str(date.today()))
     print(str(date.today()))
     flag_date  = 0
-    return render_template('index_new.html', newses = newses, flag_date = flag_date, ads = 1, link = "http://127.0.0.1:5000")
+    return render_template('index_new.html', newses = newses, flag_date = flag_date, ads = 1)
 
 
 @app.route('/', methods=['POST'])
@@ -26,7 +26,7 @@ def home_date_selected():
         for news in newses:
             if news["date"] == user_selected_date:
                 post_on_date.append(news)
-        return render_template("index_new.html", newses = post_on_date, flag = len(post_on_date), date = user_selected_date, link = "http://127.0.0.1:5000")
+        return render_template("index_new.html", newses = post_on_date, flag = len(post_on_date), date = user_selected_date)
     except:
         return render_template("index_new.html", flag=0, date = "choose a valid date!")
 
