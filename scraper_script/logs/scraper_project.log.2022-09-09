@@ -1,0 +1,240 @@
+2022-09-18 11:44:50,961 - __main__ - INFO - Scraping FMJ Journal
+2022-09-18 11:44:52,032 - __main__ - INFO - Scraping PFMonthnet Journal
+2022-09-18 11:44:55,698 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192625/The-reason-you-NEED-a-CSR-strategy.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:44:55,698 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:44:55,699 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:44:56,472 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192611/Could-returning-retirees-solve-FM-s-staffing-problem-.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:44:56,472 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:44:56,472 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:45:04,446 - __main__ - INFO - Scraping BFM Journal
+2022-09-18 11:45:05,191 - __main__ - INFO - Scraping TOMORROWS FM Journal
+2022-09-18 11:45:33,496 - __main__ - INFO - Scraping FMJ Journal
+2022-09-18 11:48:01,761 - __main__ - INFO - Scraping FMJ Journal
+2022-09-18 11:48:15,832 - __main__ - INFO - Scraping PFMonthnet Journal
+2022-09-18 11:48:17,881 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192625/The-reason-you-NEED-a-CSR-strategy.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:48:17,882 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:48:17,882 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:48:18,639 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192611/Could-returning-retirees-solve-FM-s-staffing-problem-.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:48:18,640 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:48:18,640 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:49:16,747 - __main__ - INFO - Scraping PFMonthnet Journal
+2022-09-18 11:49:42,300 - __main__ - INFO - Scraping PFMonthnet Journal
+2022-09-18 11:54:04,257 - __main__ - INFO - Scraping PFMonthnet Journal
+2022-09-18 11:54:06,434 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192625/The-reason-you-NEED-a-CSR-strategy.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:54:06,434 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:54:06,435 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:54:07,181 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192611/Could-returning-retirees-solve-FM-s-staffing-problem-.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:54:07,182 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:54:07,182 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:56:42,118 - __main__ - INFO - Scraping FMJ Journal
+2022-09-18 11:56:42,663 - __main__ - INFO - Scraping PFMonthnet Journal
+2022-09-18 11:56:44,492 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192625/The-reason-you-NEED-a-CSR-strategy.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:56:44,493 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:56:44,493 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:56:45,264 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192611/Could-returning-retirees-solve-FM-s-staffing-problem-.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:56:45,265 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:56:45,265 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 11:56:53,131 - __main__ - INFO - Scraping BFM Journal
+2022-09-18 11:56:53,660 - __main__ - INFO - Scraping TOMORROWS FM Journal
+2022-09-18 11:57:00,156 - __main__ - INFO - Scraping FACILITATE MAGAZINE Journal
+2022-09-18 11:57:00,805 - __main__ - INFO - Scraping FMLINK MAGAZINE Journal
+2022-09-18 11:57:02,018 - __main__ - INFO - Scraping EVBEX Journal
+2022-09-18 11:57:17,421 - src.utils - INFO - Connected successfully to MongoDB
+2022-09-18 11:57:18,172 - __main__ - INFO - Data deleted from mongo for the date: 2022-09-18
+2022-09-18 11:57:18,298 - __main__ - INFO - 3 number of data inserted to mongo for the date: 2022-09-18
+2022-09-18 13:37:57,002 - __main__ - INFO - Scraping FMJ Journal
+2022-09-18 13:37:57,730 - __main__ - INFO - Scraping PFMonthnet Journal
+2022-09-18 13:37:59,692 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192625/The-reason-you-NEED-a-CSR-strategy.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 13:37:59,693 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 13:37:59,693 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 13:38:00,478 - root - ERROR - Some error with the link: https://www.pfmonthenet.net/~/article/192611/Could-returning-retirees-solve-FM-s-staffing-problem-.aspx
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 13:38:00,479 - root - ERROR - Error: ':'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 13:38:00,479 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/scrapers/pfm_scraping.py", line 28, in scrape_each_article
+    date = format_pfm_date(article.p.text)
+  File "/home/raoof/Documents/evbex/evbex_sma_latest3/sma_application_20/scraper_script/src/utils.py", line 64, in format_pfm_date
+    month = MONTH_MAP[split_date[1].lower()]
+KeyError: ':'
+2022-09-18 13:38:08,085 - __main__ - INFO - Scraping BFM Journal
+2022-09-18 13:38:08,509 - __main__ - INFO - Scraping TOMORROWS FM Journal
+2022-09-18 13:38:15,015 - __main__ - INFO - Scraping FACILITATE MAGAZINE Journal
+2022-09-18 13:38:15,655 - __main__ - INFO - Scraping FMLINK MAGAZINE Journal
+2022-09-18 13:38:16,753 - __main__ - INFO - Scraping EVBEX Journal
+2022-09-18 13:38:30,890 - src.utils - INFO - Connected successfully to MongoDB
+2022-09-18 13:38:30,895 - __main__ - INFO - Data deleted from mongo for the date: 2022-09-18
+2022-09-18 13:38:30,898 - __main__ - INFO - 3 number of data inserted to mongo for the date: 2022-09-18

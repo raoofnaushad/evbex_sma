@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evbex Newsletter</title>
+    <link rel="icon" href="../static/icons/evbex-logo.svg" type="image/x-icon"/>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body id="theBody">
+    <div class="toppest-element"></div>
+    <div class="navbar">
+        <div class="primary-navbar">
+            <a href=""><img src="../static/icons/evbex-logo.svg" alt="Evbex" class="logo"></a>
+            <div class="navbar-buttons">
+                <button class="our-services">
+                    Services
+                    <img src="../static/icons/dropdown.svg" alt="" class="dropdown">
+                </button>
+                <button class="subscribe" onclick="displaySubscribePopup()">Subscribe</button>
+            </div>
+        </div>
+        <div class="services-extension">
+            <a href="https://www.evbex.com/" class="services-list-items">Evbex</a>
+            <a href="https://www.fmnavigate.com/" class="services-list-items">FM Navigate</a>
+        </div>
+        <div class="secondary-navbar">
+            {% if flag_date == 0 %}
+            <p class="date">Showing All Results</b></p>
+            {% else %}
+            <p class="date">Showing Result of <b>{{date}}</b></p>
+            {% endif %}
+            <button class="change-date" onclick="showCalender()">
+                Tap to change
+                <img src="../static/icons/calender.svg" alt="Calender-icon" class="date">
+            </button>
+            <div class="calender">
+                <form action="/" method="post">
+                    <input type="date" name="date" class="date-set" placeholder="13/06/2002" value="2002-06-13">
+                    <button type="submit" class="show-content">Show Content</button>
+                </form>
+            </div>            
+        </div>
+    </div>
+    <div class="hot-service">
+        <div class="slides">
+            <div class="slide hot-service-slide">
+                <img src="../static/images/hot-service-img.svg" alt="" class="evbex-bg-girl">
+                <div class="overlay-for-hot-service slide"></div>
+                <h2 class="flyer-text">All FM Management Related News in One Platform</h2>
+                <h1 class="evbex-newsletter common-side-margin">Evbex Newsletter</h1>
+                <p class="newsletter-description common-side-margin">
+                    A subtitle can be displayed here. Any subtitle related to Evbex Newsletter can be shown here. A subtitle can be displayed here. Any subtitle related to Evbex Newsletter can be shown here.
+                </p>
+            </div>
+            <div class="slide hot-service-slide">
+                <img src="../static/250-2508110_how-do-i-organize-my-demand-portfolio-management.jpg" alt="" class="evbex-bg-girl">
+                <div class="overlay-for-hot-service slide"></div>
+                <h2 class="flyer-text">From measuring performance to management by exception</h2>
+                <h1 class="evbex-newsletter common-side-margin">The KPI Portal</h1>
+                <p class="newsletter-description common-side-margin">
+                    Provides a unique experience in measuring and managing performance, developed by experts to save you time and money.
+                </p>
+            </div>
+            <div class="slide hot-service-slide">
+                <img src="../static/sigmund-Fa9b57hffnM-unsplash.jpg" alt="" class="evbex-bg-girl">
+                <div class="overlay-for-hot-service slide"></div>
+                <h2 class="flyer-text">Cloud Based Software for Facility Management</h2>
+                <h1 class="evbex-newsletter common-side-margin">FM Navigate</h1>
+                <p class="newsletter-description common-side-margin">
+                    Facilities Resource Planning and Management System (FRP) developed to manage and administer complex and dynamic estate and facilities management services.
+                </p>
+            </div>
+            <div class="slide hot-service-slide">
+                <img src="../static/zia-syed-gOq27RHoL3s-unsplash.jpg" alt="" class="evbex-bg-girl">
+                <div class="overlay-for-hot-service slide"></div>
+                <h2 class="flyer-text">Facility Management-Operational Solutions-Technology-R & D</h2>
+                <h1 class="evbex-newsletter common-side-margin">Evbex</h1>
+                <p class="newsletter-description common-side-margin">
+                    Achieving facilities operational excellence through optimising infrastructure, space, building services, people, business processes, and technology.
+                </p>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="1" class="slide-control"></button>
+            <button id="2" class="slide-control"></button>
+            <button id="3" class="slide-control"></button>
+            <button id="4" class="slide-control"></button>
+        </div>
+    </div>
+    <div class="posts">
+        {% for news in newses %}
+        <div class="post">
+            <div class="post-container">
+                    <h1 class="headline-of-post">{{news["article"]}} <p class="evbex-originals-txt"> | Evbex Originals</p></h1>
+                <div class="image-and-content">
+                    <img src='../static/images/{{news["article"]}}.png' alt="image of the post" class="post-img">
+                    <div class="total-content">                        
+                        <p class="contents">
+                            {{news["text"]}}
+                        </p>
+                        <p class="link" hidden>
+                            {{link}}
+                        </p>
+                        <p class="evbex-value" hidden>0</p>
+                        <p class="source-date">{{news["date"]}}</p>
+                    </div>
+                </div>
+                <div class="orginals"></div>
+            </div>
+            <div class="button-set">
+                <button class="copy-btn post-btn">
+                    <p>Copy</p>
+                    <img src="../static/icons/copy.svg" alt="" class="copy">
+                </button>
+                <a href='{{news["c2a_link"]}}' target="_blank" title='{{news["c2a_link"]}}'>
+                    <button class="view-btn post-btn">
+                        <p>View Source</p>
+                        <img src="../static/icons/view-source.svg" alt="" class="copy">
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{news['c2a_link']}}" target="_blank">
+                    <button class="linkedin-btn post-btn">
+                        <p>Share on <p class="appName">LinkedIn</p></p>
+                        <img src="../static/icons/linkedin.svg" alt="" class="copy">
+                    </button>
+                </a>
+                <a href="https://twitter.com/intent/tweet?text={{news['article']}}+{{news['text'][:120]}}+...+{{link}}&url={{news['c2a_link']}}" target="_blank">
+                    <button class="twitter-btn post-btn">
+                        <p>Share on <p class="appName">Twitter</p></p>
+                        <img src="../static/icons/twitter.svg" alt="" class="copy">
+                    </button>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="white-paper-section">
+        <div class="white-papers-container slide">
+            <h1 class="white-paper-title headline-of-post">White Papers</h1>
+            <div class="white-papers">
+                <div class="white-paper">
+                    <div class="whitepaper-img-container">
+                        <img src="../static/FutureofFMKP.jpeg" alt="" class="right-side-white-paper">
+                    </div>
+                    <div class="right-part-white-paper">
+                        <p class="white-paper-title">
+                            Pitney Bowes – Creating a positive visitor experience in a Hybrid world of work
+                        </p>
+                        <div class="button-set-inside-whitepaper">
+                            <a href="../static/FutureofFMKP.pdf" class="white-paper-btn dwnld-btn">Download</a>
+                            <a href="https://www.fmj.co.uk/planradar-the-future-of-property-facility-management/" class="white-paper-btn" target="_blank">View Source</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-paper">
+                    <div class="whitepaper-img-container">
+                        <img src="../static//wf22-whitepaper.jpeg" alt="" class="right-side-white-paper">
+                    </div>
+                    <div class="right-part-white-paper">
+                        <p class="white-paper-title">
+                            FM & sustainability: the social, environmental and commercial challenge
+                        </p>
+                        <div class="button-set-inside-whitepaper">
+                            <a href="../static/wf22-whitepaper.pdf" class="white-paper-btn dwnld-btn">Download</a>
+                            <a href="https://www.i-fm.net/whitepaper" class="white-paper-btn" target="_blank">View Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if flag == 0 %}
+    <div class="no-data">
+        <div class="empty-imgcontainer">
+            <img src="../static/images/2953962.jpg" alt="">
+        </div>
+    </div>
+    {% endif %}
+    <div class="dark-overlay"></div>
+    <div class="subscribe-popup">
+        <div class="popup-container">
+            <div class="pop-title">
+                <h2 class="main-title">Subscribe to our Newsletter!!</h2>
+                <h3 class="sub-title">Get notified with fresh news</h3>
+            </div>
+            <form action="/subscribe" method="post">
+                <div class="popup-body">
+                    <div class="input-box">
+                        <p class="box-title">Name</p>
+                        <input type="text" name="name" class="box name" required>
+                    </div>
+                    <div class="input-box">
+                        <p class="box-title">Mail Id</p>
+                        <input type="text" name="mail" class="box mail" placeholder="eg : eric2002@gmail.com" required>
+                        <!-- <input type="email" class="box" pattern=".+@globex\.com" required> -->
+                    </div>
+                    <p class="box-title error" style="font-weight:600;">*Invalid Mail Id</p>
+                </div>
+                <div class="popup-actions">
+                    <button class="cancel-btn subscribe" onclick="hideSubscribePopup()">Cancel</button>
+                    <button class="subscribe subscribe-on-popup">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="advar" hidden>{{ads}}</p>
+    {% if ads==1 %}
+    <div class="ads-popup">
+        <div class="popup-container ads-popup-container">
+            <div class="pop-title popup-header">
+                <h2 class="main-title">Take a look at Evbex Services and Products</h2>
+                <button><img src="../static/icons/close-btn.svg" alt="X" class="closebtn-in-ads" onclick="closeAdsPopup()"></button>
+            </div>
+            <div class="popup-body ads-container">
+                <div class="ad">
+                    <div class="ad-container">
+                        <div class="left-part-of-ad">
+                            <img src="../static/icons/KPI Portal Logo.svg" alt="The KPI Portal Logo" class="product-logo">
+                        </div>
+                        <div class="right-part-of-ad">
+                            <div class="adTitle-visit-btn">
+                                <p class="product-title">The KPI Portal</p>
+                                <a href="https://thekpiportal.com/" class="visit-button" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                            </div>
+                            <p class="product-subtitle">From measuring performance to management by exception</p>
+                            <p class="product-details">Provides a unique experience in measuring and managing performance, developed by experts to save you time and money.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad">
+                    <div class="ad-container">
+                        <div class="left-part-of-ad">
+                            <img src="../static/icons/FM Navigate Logo.svg" alt="FM Navigate Logo" class="product-logo">
+                        </div>
+                        <div class="right-part-of-ad fm-navigate">
+                            <div class="adTitle-visit-btn">
+                                <p class="product-title">FM Navigate</p>
+                                <a href="https://www.evbex.com/fm-navigate-facility-management-software/" class="visit-button" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                            </div>
+                            <p class="product-subtitle">Cloud Based Software for Facility Management</p>
+                            <p class="product-details">Facilities Resource Planning and Management System (FRP) developed to manage and administer complex and dynamic estate and facilities management services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad">
+                    <div class="ad-container">
+                        <div class="left-part-of-ad">
+                            <img src="../static/icons/evbex-logo.svg" alt="FM Navigate Logo" class="product-logo">
+                        </div>
+                        <div class="right-part-of-ad evbex">
+                            <div class="adTitle-visit-btn">
+                                <p class="product-title">Evbex</p>
+                                <a href="https://www.evbex.com/" class="visit-button" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                            </div>
+                            <p class="product-subtitle">Facility Management - Operational Solutions - Technology – Research and Development</p>
+                            <p class="product-details">Achieving facilities operational excellence through optimising infrastructure, space, building services, people, business processes, and technology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if subs==1 %}
+    <div class="success-message">
+        <div class="left-part">
+            <img src="../static/icons/success.svg" alt="success" class="success">
+        </div>
+        <div class="right-part">
+            <p class="success-title">Success!!</p>
+            <p class="success-content">Your subscription has been added. You will be receiving our daily updates! Check it out!!</p>
+            <button style="border: none; background: transparent;" onclick="closeSuccessNoti()"><img src="../static/icons/close-btn.svg" alt="X" class="success-close-btn"></button>
+        </div>
+    </div>
+    {% endif %}
+    <div class="unsubscribe-popup subscribe-popup">
+        <div class="popup-container">
+            <div class="pop-title">
+                <h2 class="main-title">Unsubscribe Newsletter</h2>
+                <h3 class="sub-title">You can subscribe again anytime later!!</h3>
+            </div>
+            <form action="/subscribe" method="post">
+                <div class="popup-body">
+                    <div class="input-box">
+                        <p class="box-title">Enter your subscribed Mail Id</p>
+                        <input type="text" name="mail" class="box mail" placeholder="eg : eric2002@gmail.com" required>
+                        <!-- <input type="email" class="box" pattern=".+@globex\.com" required> -->
+                    </div>
+                    <p class="box-title error" style="font-weight:600;">*Invalid Mail Id</p>
+                </div>
+                <div class="popup-actions">
+                    <button class="cancel-btn subscribe" onclick="hideUnsubscribePopup()">Cancel</button>
+                    <button class="subscribe subscribe-on-popup">Unsubscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p style="margin-bottom:10px;">Want to unsubscribe from our newsletter? <a href="#" onclick="displayUnsubscribePopup()"><u>Click here</u></a></p>
+        <p>© 2022 Evolve Business Excellence Limited. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        <button class="back-to-top" onclick="goToTop()"><img src="../static/icons/up-arrow.svg" alt="" class="up-arrow"></button>
+    </div>
+    <script src="../static/js/script .js"></script>
+</body>
+</html>
