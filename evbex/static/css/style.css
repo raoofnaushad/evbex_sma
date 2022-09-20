@@ -38,6 +38,9 @@ body{
     top: 8.1vh;
     left: calc(100vw - (var(--horizontal-padding-navbar) + var(--gap-between-primary-navbar-buttons) + 112.467px + 89.0667px));
 }
+.logo{
+    height: 38px;
+}
 .services-list-items{
     padding: 10px 20px;
     background: white;
