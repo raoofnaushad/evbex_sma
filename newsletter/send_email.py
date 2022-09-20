@@ -30,7 +30,7 @@ def SendDynamic(TO_EMAILS, content):
     # print(os.environ.get('SENDGRID_API_KEY'))
     # exit()
     try:
-        sg = SendGridAPIClient(TOKEN)
+        sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
         response = sg.send(message)
         code, body, headers = response.status_code, response.body, response.headers
         print(f"Response code: {code}")
