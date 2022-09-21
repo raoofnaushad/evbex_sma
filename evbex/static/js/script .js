@@ -125,7 +125,7 @@ mailInputBox.addEventListener("keyup",function(){
     var text = mailInputBox.value;
     var flag = "false";    
     const errorMessage = document.querySelector(".error");
-    if((text.length>8) && (text.search("@")!= -1) && (text.search(".com")!= -1) && (text.search('.')!= -1) && (text.search("mail")!= -1) && (text.search(" ") == -1)){
+    if((text.length>8) && (text.search("@")!= -1) && (text.search(".com")!= -1) && (text.search('.')!= -1) && (text.search(" ") == -1)){
         errorMessage.innerHTML = "Seems correct";
         errorMessage.style.color = "green";
         errorMessage.style.display = "block";
