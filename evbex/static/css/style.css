@@ -163,7 +163,7 @@ h2,p,h1,h3{
 .post-btn{
     border: none;
     color: white;
-    width: calc((909px - 6px)/4);
+    width: calc((909px - 6px)/3);
     height: 59px;   
     display: flex;
     align-items: center;
@@ -517,7 +517,7 @@ input::selection{
         width: calc(90vw - 56px);
     }
     .post-btn{
-        width: calc((90vw - 6px)/4);
+        width: calc((90vw - 6px)/3);
     }
     .popup-container{
         padding: 4vw;
