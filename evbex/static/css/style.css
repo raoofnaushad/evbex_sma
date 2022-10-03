@@ -164,7 +164,7 @@ h2,p,h1,h3{
     border: none;
     color: white;
     width: calc((909px - 6px)/3);
-    height: 59px;   
+    height: 45px;   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,30 +182,30 @@ h2,p,h1,h3{
     text-decoration: none;
 }
 .copy-btn{
-    background: #002B65;
-    border-radius: 0 0 0 8px;
+    background: #002B65;    
 }
 .copy-btn:hover{
     background: #1B437A;
 }
 .view-btn{
-    background: #DB3331;
+    background: rgba(219, 51, 49, 0.85);
+    border-radius: 0 0 0 8px;
 }
 .view-btn:hover{
-    background: #E44543;
+    background: #DB3331;
 }
 .linkedin-btn{
-    background: #0072B1;
+    background: rgba(0, 114, 177, 0.85);
 }
 .linkedin-btn:hover{
-    background: #3696CB;
+    background: #0072B1;
 }
 .twitter-btn{
-    background: #00ACEE;
+    background: rgba(0, 172, 238, 0.85);
     border-radius: 0 0 8px 0;
 }
 .twitter-btn:hover{
-    background: #26B9F1;
+    background: #00ACEE;
 }
 button{
     cursor: pointer;
