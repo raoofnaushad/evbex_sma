@@ -9,6 +9,7 @@ function openOverlay(){
 function closeOverlay(){
     overlay.style.display = "none";
     body.style.overflowY = "unset";
+    body.style.overflowX = "hidden";
 }
 
 
