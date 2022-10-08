@@ -8,7 +8,7 @@ function openOverlay(){
 }
 function closeOverlay(){
     overlay.style.display = "none";
-    body.style.overflow = "unset";
+    body.style.overflowY = "unset";
 }
 
 
