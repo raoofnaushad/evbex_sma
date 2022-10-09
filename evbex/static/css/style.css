@@ -622,7 +622,7 @@ input::selection{
 }
 
 .hot-service{
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -728,7 +728,7 @@ input::selection{
 .white-paper-section{
     display: flex;
     justify-content: center;
-    width: 100vw;
+    /* width: 100vw; */
     margin-bottom: 60px;
 }
 .white-papers-container{
@@ -807,7 +807,7 @@ input::selection{
 .white-paper-section{
     display: flex;
     justify-content: center;
-    width: 100vw;
+    /* width: 100vw; */
     margin-bottom: 60px;
 }
 .white-papers-container{
