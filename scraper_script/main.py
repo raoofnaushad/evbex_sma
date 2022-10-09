@@ -2,7 +2,7 @@
 
 from src.utils import *
 from src.config import *
-from scrapers import fmj_scraping, pfm_scraping, bfm_scraping, evbex_scraping, tomorrow_scraping,  facilitatemag, fmlink_scrapping
+from scrapers import fmj_scraping, pfm_scraping, bfm_scraping, evbex_scraping, ifma_scrapping, tomorrow_scraping,  facilitatemag, fmlink_scrapping
 
 
 class Scraper():
@@ -41,8 +41,12 @@ class Scraper():
             elif site == "EVBEX":
                 logger.info("Scraping EVBEX Journal")
                 scraped = evbex_scraping.main()
+
+            elif site == "IFMA":
+                logger.info("Scraping IFMA Journal")
+                scraped = ifma_scrapping.main()
                 
-            #logger.info(f"Scraped contents from {site} is: {len(scraped)}")
+            logger.info(f"Scraped contents from {site} is: {len(scraped)}")
             return scraped
 
         except Exception as ex:
@@ -95,6 +99,9 @@ def start_scraping():
 
     ## Scraping Evbex
     scrape.contents.extend(scrape.scrape_news("EVBEX"))
+
+    ## Scraping IFMA
+    scrape.contents.extend(scrape.scrape_news("IFMA"))
 
     ## Writing to DB
     scrape.write_news_to_db()

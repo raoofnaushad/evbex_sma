@@ -1,6 +1,4 @@
-
 from bs4 import BeautifulSoup
-
 from src.config import *
 from src.utils import *
 
@@ -8,13 +6,17 @@ def get_article_links(content):
     article_links = list()
     soup = BeautifulSoup(content, 'lxml')
     
-    posts = soup.find_all('article')
+    posts = soup.find_all('h4', class_="sfpostTitle")
 
     for article in posts:
-        link = article.a['href']
-        dateofart = article.h1.text.split(" ")
-        dateofart = dateofart[len(dateofart)-3:len(dateofart)]
+        link = "https://www.ifma.org/"+article.a['href']
+        dateofart = article.div.text.split(" ")
+        dateofart[1] = dateofart[1].split(",")[0]
+        if(len(dateofart[1])==1):
+            dateofart[1] = '0' + dateofart[1]
         formatted_date = format_fmlink_date(dateofart[0], dateofart[1], dateofart[2])   #month date and year
+        # print(formatted_date, link)
+        # print(today)
         if formatted_date == today:
             article_links.append(link)
     
@@ -25,8 +27,8 @@ def scrape_each_article(link):
     try:
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
-        heading = article.find('h1', class_ = "entry-title").text
-        img_src = article.find('div', id = "content").img['src']
+        heading = article.find('h1', class_ = "sfpostTitle").text
+        img_src = article.find('a', class_="navbar-brand").img['src']
         img_path = user_download(img_src, heading)
         article_content_1 = article.find_all('p')[1].text        
         article_content_2 = article.find_all('p')[2].text        
@@ -53,7 +55,7 @@ def scrape_each_article(link):
 def main():
     contents = list()
         
-    content = get_html_content(FMLINK_MAG)
+    content = get_html_content("https://www.ifma.org/news/whats-new-at-ifma-new/")
     
     articles = get_article_links(content)
     
@@ -62,5 +64,6 @@ def main():
         if out:
             contents.append(out)
 
-    print(f"Number of articles from FMLinkScraping: {len(contents)}")
+    print(f"Number of articles from IFMAScrapping: {len(contents)}")
     return contents
+

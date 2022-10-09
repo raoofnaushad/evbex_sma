@@ -6,6 +6,7 @@ FMI_LINK = "https://fmindustry.com/category/news/"  #scrapper detection enabled 
 FACILITATE_MAG = "https://www.facilitatemagazine.com/sections/content/news"
 FMLINK_MAG = "https://www.fmlink.com/category/news/"
 FMEXECUTIVE = "https://facilityexecutive.com/"  #scrapper detection enabled in the site
+IFMA_LINK = "https://www.ifma.org/news/whats-new-at-ifma-new/"
 
 
 EVBEX_LINK = "https://www.evbex.com/blogs-fm-platform/"
