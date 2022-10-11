@@ -53,6 +53,7 @@ def user_download(url, filename):
     r = requests.get(url)
     base_path = '/'.join(os.path.abspath(os.getcwd()).split('/')[:-1]) + IMG_PATH
     filename = filename.replace('/', '_')
+    filename = filename.replace(' ', '')
     out_path = base_path + filename + ".png"
     with open(out_path, 'wb') as f:
         f.write(r.content)
@@ -105,5 +106,12 @@ def format_tmrw_date(date):
     year = split_date[2]
     
     final_date = year + '-' + month + '-' + day
+    
+    return final_date
+
+def format_iwfm_date(month, date, year):
+    date = date[0:2]
+    month = MONTH_MAP[month.lower()]
+    final_date = year + '-' + month + '-' + date
     
     return final_date

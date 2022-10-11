@@ -2,7 +2,7 @@
 
 from src.utils import *
 from src.config import *
-from scrapers import fmj_scraping, pfm_scraping, bfm_scraping, evbex_scraping, ifma_scrapping, tomorrow_scraping,  facilitatemag, fmlink_scrapping
+from scrapers import fmj_scraping, iwfm_scrapping, pfm_scraping, bfm_scraping, evbex_scraping, ifma_scrapping, tomorrow_scraping,  facilitatemag, fmlink_scrapping
 
 
 class Scraper():
@@ -45,6 +45,10 @@ class Scraper():
             elif site == "IFMA":
                 logger.info("Scraping IFMA Journal")
                 scraped = ifma_scrapping.main()
+            
+            elif site == "IWFM":
+                logger.info("Scraping IWFM Journal")
+                scraped = iwfm_scrapping.main()
                 
             logger.info(f"Scraped contents from {site} is: {len(scraped)}")
             return scraped
@@ -103,17 +107,20 @@ def start_scraping():
     ## Scraping IFMA
     scrape.contents.extend(scrape.scrape_news("IFMA"))
 
+    ## Scraping IFMA
+    scrape.contents.extend(scrape.scrape_news("IWFM"))
+
     ## Writing to DB
-    scrape.write_news_to_db()
+    # scrape.write_news_to_db()
     
         
-    file = open("scrappedcontents.txt", "w")
-    file.writelines(f'Date: {today}\n')
-    file.writelines("###"*10)
-    file.writelines("\n")
-    for scrapped_articles in scrape.contents:
-        file.writelines(scrapped_articles["article"])
-        file.writelines('\n')
+    # file = open("scrappedcontents.txt", "w")
+    # file.writelines(f'Date: {today}\n')
+    # file.writelines("###"*10)
+    # file.writelines("\n")
+    # for scrapped_articles in scrape.contents:
+    #     file.writelines(scrapped_articles["article"])
+    #     file.writelines('\n')
 
 
 if __name__ == "__main__":
