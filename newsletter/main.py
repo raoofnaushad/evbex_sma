@@ -12,7 +12,5 @@ def send_email():
     SendDynamic(TO_EMAILS, data)
 
 
-    # for each in TO_EMAILS:
-
 if __name__ == "__main__":
     send_email()

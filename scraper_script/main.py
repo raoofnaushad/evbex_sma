@@ -110,8 +110,8 @@ def start_scraping():
     ## Scraping IFMA
     scrape.contents.extend(scrape.scrape_news("IWFM"))
 
-    ## Writing to DB
-    # scrape.write_news_to_db()
+    # Writing to DB
+    scrape.write_news_to_db()
     
         
     # file = open("scrappedcontents.txt", "w")
