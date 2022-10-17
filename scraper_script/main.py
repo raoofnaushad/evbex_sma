@@ -114,13 +114,13 @@ def start_scraping():
     scrape.write_news_to_db()
     
         
-    # file = open("scrappedcontents.txt", "w")
-    # file.writelines(f'Date: {today}\n')
-    # file.writelines("###"*10)
-    # file.writelines("\n")
-    # for scrapped_articles in scrape.contents:
-    #     file.writelines(scrapped_articles["article"])
-    #     file.writelines('\n')
+    file = open("scrappedcontents.txt", "w")
+    file.writelines(f'Date: {today}\n')
+    file.writelines("###"*10)
+    file.writelines("\n")
+    for scrapped_articles in scrape.contents:
+        file.writelines(scrapped_articles["article"])
+        file.writelines('\n')
 
 
 if __name__ == "__main__":

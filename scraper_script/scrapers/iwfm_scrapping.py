@@ -16,7 +16,7 @@ def get_article_links(content):
         dateofart =  dates[countfrdates].text.split("\n")[2].split("\t")[4].split(" ")
         countfrdates+=1
         formatted_date = format_iwfm_date(dateofart[1], dateofart[0], dateofart[2])   #month date and year
-        if formatted_date == "2022-10-06":
+        if formatted_date == today:
             article_links.append(link)
     
     return article_links
