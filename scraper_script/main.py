@@ -100,14 +100,14 @@ def start_scraping():
     # Scrapping fmlink magazine
     scrape.contents.extend(scrape.scrape_news("FMLINK_MAGAZINE"))
 
-    ## Scraping Evbex
-    scrape.contents.extend(scrape.scrape_news("EVBEX"))
-
     ## Scraping IFMA
     scrape.contents.extend(scrape.scrape_news("IFMA"))
 
     ## Scraping IFMA
     scrape.contents.extend(scrape.scrape_news("IWFM"))
+
+    ## Scraping Evbex
+    scrape.contents.extend(scrape.scrape_news("EVBEX"))
 
     # Writing to DB
     scrape.write_news_to_db()

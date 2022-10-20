@@ -8,8 +8,8 @@ import requests
 
 from src.config import *
 
-# today = str(date.today()) ## Getting date for each day
-today = "2022-10-20"
+today = str(date.today()) ## Getting date for each day
+# today = "2022-10-20"
 
 def get_logger(name="root"):
     '''
@@ -52,8 +52,8 @@ def string_present(str1, str2):
 def user_download(url, filename):
     r = requests.get(url)
     base_path = '/'.join(os.path.abspath(os.getcwd()).split('/')[:-1]) + IMG_PATH
-    filename = filename.replace('/', '_')
-    filename = filename.replace(' ', '')
+    # filename = filename.replace('/', '_')
+    # filename = filename.replace(' ', '')
     out_path = base_path + filename + ".png"
     with open(out_path, 'wb') as f:
         f.write(r.content)

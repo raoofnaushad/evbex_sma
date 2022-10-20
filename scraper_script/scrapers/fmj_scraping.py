@@ -36,7 +36,8 @@ def scrape_each_article(link):
         img_src = img_src.img['data-lazy-src']
         
         img_path = user_download(img_src, heading)
-        
+        print(img_path)
+
         
         article_contents = article.find_all('div', class_='entry')[:1]
         article_content = '\n'.join(para.text for para in article_contents) 

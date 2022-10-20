@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 from src.config import *
 from src.utils import *
 
+bad_chars = [';', ':', '!', "*", "'", "\n", "‘", "’"]
+
 def get_article_links(content):
     article_links = list()
     soup = BeautifulSoup(content, 'lxml')
@@ -26,7 +28,10 @@ def scrape_each_article(link):
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
         heading = article.find('h1', class_ = "page-title").text
+        for i in bad_chars:
+            heading = heading.replace(i, '')
         img_src = "https://www.facilitatemagazine.com/" + article.find('div', class_ = 'media-image-field').img['src']
+        
         img_path = user_download(img_src, heading)
         article_content_1 = article.find_all('p')[1].text        
         article_content_2 = article.find_all('p')[2].text        
@@ -43,6 +48,7 @@ def scrape_each_article(link):
             "evbex" : 0,
             "fmj" : 0
         }
+        print(content)
         return content
         
     except Exception as ex:
