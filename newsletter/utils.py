@@ -39,7 +39,25 @@ def get_data_from_mongo():
     for i in range(6):
         dates_req.append(get_n_prev_date(i))
 
-    data = collection.find({"$and":[ {"evbex":0}, 
+    # data = collection.find({"$and":[ {"evbex":0}, 
+    #                                 {"$or":[ 
+    #                                     {"date":dates_req[0]}, 
+    #                                     {"date":dates_req[1]},
+    #                                     {"date":dates_req[2]},
+    #                                     {"date":dates_req[3]},
+    #                                     {"date":dates_req[4]},
+    #                                     {"date":dates_req[5]},
+    #                                 ]}
+    #                                 ]
+    #                         },{'_id':False})
+    
+
+    # data = [each for each in data]
+    
+    
+    data_fmj = collection.find({"$and":[ 
+                                    {"evbex":0}, 
+                                    {"fmj" : 1},
                                     {"$or":[ 
                                         {"date":dates_req[0]}, 
                                         {"date":dates_req[1]},
@@ -52,31 +70,53 @@ def get_data_from_mongo():
                             },{'_id':False})
     
 
-    data = [each for each in data]
+    data_fmj = [each for each in data]
     
-    if len(data) == 0:
-        # exit()
-        print(f"No data found for this week: {today}")
-        data = collection.find({"$or":[ 
+    
+    data_non_fmj = collection.find({"$and":[ 
+                                    {"evbex":0}, 
+                                    {"fmj" : 0},
+                                    {"$or":[ 
                                         {"date":dates_req[0]}, 
                                         {"date":dates_req[1]},
                                         {"date":dates_req[2]},
                                         {"date":dates_req[3]},
                                         {"date":dates_req[4]},
                                         {"date":dates_req[5]},
-                                        ]},{'_id':False})
+                                    ]}
+                                    ]
+                            },{'_id':False})
+    
+
+    data_non_fmj = [each for each in data]
+    
+    # if len(data) == 0:
+    #     # exit()
+    #     print(f"No data found for this week: {today}")
+    #     data = collection.find({"$or":[ 
+    #                                     {"date":dates_req[0]}, 
+    #                                     {"date":dates_req[1]},
+    #                                     {"date":dates_req[2]},
+    #                                     {"date":dates_req[3]},
+    #                                     {"date":dates_req[4]},
+    #                                     {"date":dates_req[5]},
+    #                                     ]},{'_id':False})
         
-        data = [each for each in data]
+    #     data = [each for each in data]
         
-    # datas = []
-    # for each in data:
-    #     if each not in datas:
-    #         datas.append(each)
+    # # datas = []
+    # # for each in data:
+    # #     if each not in datas:
+    # #         datas.append(each)
     
     # data = set(data)
-    if len(data) > 5:
-        data = random.sample(data, 5)
+    if len(data_non_fmj) > 5:
+        data_non_fmj = random.sample(data_non_fmj, 3)
         
+    if len(data_fmj) > 5:
+        data_fmj = random.sample(data_fmj, 2)
+    
+    data = data_non_fmj + data_fmj
     
     for each in data:
         each["text"] = ' '.join(each["text"].split()[:85]) + ' ..'

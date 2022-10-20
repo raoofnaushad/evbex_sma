@@ -20,6 +20,9 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
+        print("**********************")
+        print(link)
+        print("**********************")
         content = get_html_content(link)
         soup = BeautifulSoup(content, 'lxml')
         
@@ -46,7 +49,8 @@ def scrape_each_article(link):
                         "text": article_content,
                         "c2a_link": link,
                         "c2a_button": "Read from Source",
-                        "evbex" : 0
+                        "evbex" : 0,
+                        "fmj" : 0
                     }
             
             return content

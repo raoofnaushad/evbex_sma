@@ -15,7 +15,7 @@ def get_article_links(content):
     for article in articles:
         link = article.a['href']
         date = article.find('span', class_='date meta-item tie-icon').text
-        if string_present(date, 'hours') or string_present(date, 'mins') or string_present(date, 'hour') or string_present(date, 'min'):
+        if string_present(date, 'hours') or string_present(date, 'mins') or string_present(date, 'hour') or string_present(date, 'min') or string_present(date, 'day'):
             article_links.append(article.h2.a['href'])
         # formatted_date = format_bfm_date(date)
         # if formatted_date == today:
@@ -25,6 +25,9 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
+        print("**********************")
+        print(link)
+        print("**********************")
         content = get_html_content(link)
         soup = BeautifulSoup(content, 'lxml')
         
@@ -49,7 +52,8 @@ def scrape_each_article(link):
                     "text": article_content,
                     "c2a_link": link,
                     "c2a_button": "Read from Source",
-                    "evbex" : 0
+                    "evbex" : 0,
+                    "fmj" : 0
                 }
         
         return content

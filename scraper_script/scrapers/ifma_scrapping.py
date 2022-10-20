@@ -15,8 +15,6 @@ def get_article_links(content):
         if(len(dateofart[1])==1):
             dateofart[1] = '0' + dateofart[1]
         formatted_date = format_fmlink_date(dateofart[0], dateofart[1], dateofart[2])   #month date and year
-        # print(formatted_date, link)
-        # print(today)
         if formatted_date == today:
             article_links.append(link)
     
@@ -25,11 +23,14 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
+        print("**********************")
+        print(link)
+        print("**********************")
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
         heading = article.find('h1', class_ = "sfpostTitle").text
         img_src = article.find('a', class_="navbar-brand").img['src']
-        img_path = user_download(img_src, heading)
+        img_path = '/'.join(os.path.abspath(os.getcwd()).split('/')[:-1]) + "/evbex/static/ifma.png"
         article_content_1 = article.find_all('p')[1].text        
         article_content_2 = article.find_all('p')[2].text        
         article_content_3 = article.find_all('p')[3].text  
@@ -42,7 +43,8 @@ def scrape_each_article(link):
             "text": article_content,
             "c2a_link": link,
             "c2a_button": "Read from Source",
-            "evbex" : 0
+            "evbex" : 0,
+            "fmj" : 0
         }
         return content
         

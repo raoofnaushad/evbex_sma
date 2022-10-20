@@ -91,7 +91,6 @@ def start_scraping():
     ## Scraping BFM
     scrape.contents.extend(scrape.scrape_news("BFM"))
     
-    
     ## Scraping BFM
     scrape.contents.extend(scrape.scrape_news("TOMORROW_FM"))
 

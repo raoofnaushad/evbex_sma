@@ -20,6 +20,9 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
+        print("**********************")
+        print(link)
+        print("**********************")
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
         heading = article.find('h1', class_ = "page-title").text
@@ -37,7 +40,8 @@ def scrape_each_article(link):
             "text": article_content,
             "c2a_link": link,
             "c2a_button": "Read from Source",
-            "evbex" : 0
+            "evbex" : 0,
+            "fmj" : 0
         }
         return content
         
@@ -54,7 +58,6 @@ def main():
     #print(content)
     
     articles = get_article_links(content)
-    # articles = ['https://www.facilitatemagazine.com/2022/09/01/trade-bodies-issue-clarity-fire-safety-warning-pipework', 'https://www.facilitatemagazine.com/content/news/2022/09/01/half-organisations-support-extending-paternity-leave-and-pay']
     
     for article in articles:
         out = scrape_each_article(article)

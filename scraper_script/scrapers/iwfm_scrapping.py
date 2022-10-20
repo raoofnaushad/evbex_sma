@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 from src.config import *
 from src.utils import *
-today = str(date.today())
 
 def get_article_links(content):
     article_links = list()
@@ -16,6 +15,7 @@ def get_article_links(content):
         dateofart =  dates[countfrdates].text.split("\n")[2].split("\t")[4].split(" ")
         countfrdates+=1
         formatted_date = format_iwfm_date(dateofart[1], dateofart[0], dateofart[2])   #month date and year
+
         if formatted_date == today:
             article_links.append(link)
     
@@ -24,6 +24,9 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
+        print("**********************")
+        print(link)
+        print("**********************")
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
         heading = article.find('div', class_ = "entry").h1.text
@@ -38,7 +41,8 @@ def scrape_each_article(link):
             "text": article_content,
             "c2a_link": link,
             "c2a_button": "Read from Source",
-            "evbex" : 0
+            "evbex" : 0,
+            "fmj" : 0
         }
         return content
         
@@ -50,7 +54,7 @@ def scrape_each_article(link):
 
 def main():
     contents = list()
-        
+
     content = get_html_content(IWFM_LINK)
     
     articles = get_article_links(content)

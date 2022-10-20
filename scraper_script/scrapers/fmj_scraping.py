@@ -24,6 +24,9 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
+        print("**********************")
+        print(link)
+        print("**********************")
         content = get_html_content(link)
         soup = BeautifulSoup(content, 'lxml')
         article = soup.find('article')
@@ -49,7 +52,8 @@ def scrape_each_article(link):
                     "text": article_content,
                     "c2a_link": link,
                     "c2a_button": "Read from Source",
-                    "evbex" : 0
+                    "evbex" : 0,
+                    "fmj" : 1
                 }
         
         return content
@@ -66,8 +70,8 @@ def main():
     articles = get_article_links(content)
     
     for article in articles:
-        if scrape_each_article(article):
-            contents.append(scrape_each_article(article))
-    
+        content = scrape_each_article(article)
+        if content:
+            contents.append(content)
     print(f"Number of articles from FMJ: {len(contents)}")
     return contents
