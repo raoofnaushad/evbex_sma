@@ -8,8 +8,8 @@ import requests
 
 from src.config import *
 
-# today = str(date.today()) ## Getting date for each day
-today = "2022-10-20"
+today = str(date.today()) ## Getting date for each day
+# today = "2022-10-20"
 
 def get_logger(name="root"):
     '''
