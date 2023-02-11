@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evbex Newsletter</title>
-    <link rel="icon" href="../static/images/logo-10.png" type="image/x-icon"/>
+    <link rel="icon" href="../static/icons/new-evbex-logo.svg" type="image/x-icon"/>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body id="theBody">
@@ -47,21 +47,30 @@
     <div class="hot-service">
         <div class="slides">
             <div class="slide hot-service-slide">
-                <img src="../static/images/hot-service-img.svg" alt="" class="evbex-bg-girl">
+                <img src="../static/fmnewsletter.jpg" alt="" class="evbex-bg-girl">
                 <div class="overlay-for-hot-service slide"></div>
                 <h2 class="flyer-text">All FM Management Related News in One Platform</h2>
                 <h1 class="evbex-newsletter common-side-margin">Evbex Newsletter</h1>
                 <p class="newsletter-description common-side-margin">
-                    A subtitle can be displayed here. Any subtitle related to Evbex Newsletter can be shown here. A subtitle can be displayed here. Any subtitle related to Evbex Newsletter can be shown here.
+                    Evbex Newsletter give you the latest news in the Facility Management industry. It is a one time solution for all the latest updates in the industry.
                 </p>
             </div>
             <div class="slide hot-service-slide">
-                <img src="../static/250-2508110_how-do-i-organize-my-demand-portfolio-management.jpg" alt="" class="evbex-bg-girl">
+                <img src="../static/zia-syed-gOq27RHoL3s-unsplash.jpg" alt="" class="evbex-bg-girl">
                 <div class="overlay-for-hot-service slide"></div>
-                <h2 class="flyer-text">From measuring performance to management by exception</h2>
-                <h1 class="evbex-newsletter common-side-margin">The KPI Portal</h1>
+                <h2 class="flyer-text">Latest products and services for FM industry by Evbex</h2>
+                <h1 class="evbex-newsletter common-side-margin">Evbex Latest</h1>
                 <p class="newsletter-description common-side-margin">
-                    Provides a unique experience in measuring and managing performance, developed by experts to save you time and money.
+                    We deliver a range of agile and lean facilities management service solutions that will benefit your business. Our services are designed to support you through highly effective and efficient facility management consulting solutions.
+                </p>
+            </div>
+            <div class="slide hot-service-slide">
+                <img src="../static/zia-syed-gOq27RHoL3s-unsplash.jpg" alt="" class="evbex-bg-girl">
+                <div class="overlay-for-hot-service slide"></div>
+                <h2 class="flyer-text">Facility Management-Operational Solutions-Technology-R & D</h2>
+                <h1 class="evbex-newsletter common-side-margin">Evbex</h1>
+                <p class="newsletter-description common-side-margin">
+                    Achieving facilities operational excellence through optimising infrastructure, space, building services, people, business processes, and technology.
                 </p>
             </div>
             <div class="slide hot-service-slide">
@@ -74,12 +83,12 @@
                 </p>
             </div>
             <div class="slide hot-service-slide">
-                <img src="../static/zia-syed-gOq27RHoL3s-unsplash.jpg" alt="" class="evbex-bg-girl">
+                <img src="../static/250-2508110_how-do-i-organize-my-demand-portfolio-management.jpg" alt="" class="evbex-bg-girl">
                 <div class="overlay-for-hot-service slide"></div>
-                <h2 class="flyer-text">Facility Management-Operational Solutions-Technology-R & D</h2>
-                <h1 class="evbex-newsletter common-side-margin">Evbex</h1>
+                <h2 class="flyer-text">From measuring performance to management by exception</h2>
+                <h1 class="evbex-newsletter common-side-margin">The KPI Portal</h1>
                 <p class="newsletter-description common-side-margin">
-                    Achieving facilities operational excellence through optimising infrastructure, space, building services, people, business processes, and technology.
+                    Provides a unique experience in measuring and managing performance, developed by experts to save you time and money.
                 </p>
             </div>
         </div>
@@ -88,6 +97,7 @@
             <button id="2" class="slide-control"></button>
             <button id="3" class="slide-control"></button>
             <button id="4" class="slide-control"></button>
+            <button id="5" class="slide-control"></button>
         </div>
     </div>
     <div class="posts">
@@ -96,7 +106,7 @@
             <div class="post-container">
                     <h1 class="headline-of-post">{{news["article"]}} <p class="evbex-originals-txt"> | Evbex Originals</p></h1>
                 <div class="image-and-content">
-                    <img src='../static/images/{{news["article"]}}.png' alt="image of the post" class="post-img">
+                    <img src='../static/images/{{news["image"]}}' alt="image of the post" class="post-img">
                     <div class="total-content">                        
                         <p class="contents">
                             {{news["text"]}}
@@ -253,7 +263,7 @@
                         <div class="right-part-of-ad fm-navigate">
                             <div class="adTitle-visit-btn">
                                 <p class="product-title">FM Navigate</p>
-                                <a href="https://www.evbex.com/fm-navigate-facility-management-software/" class="visit-button" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                                <a href="https://www.fmnavigate.com/" class="visit-button" target="_blank" rel="noopener noreferrer">Visit Website</a>
                             </div>
                             <p class="product-subtitle">Cloud Based Software for Facility Management</p>
                             <p class="product-details">Facilities Resource Planning and Management System (FRP) developed to manage and administer complex and dynamic estate and facilities management services.</p>
@@ -312,7 +322,7 @@
     <div class="footer">
         <p style="margin-bottom:10px;">Want to unsubscribe from our newsletter? <a href="#" onclick="displayUnsubscribePopup()"><u>Click here</u></a></p>
         <p>© 2022 Evolve Business Excellence Limited. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        <p><a href="https://www.evbex.com/privacy-policy/">Privacy Policy</a> | <a href="https://www.evbex.com/terms-and-conditions/">Terms & Conditions</a></p>
         <button class="back-to-top" onclick="goToTop()"><img src="../static/icons/up-arrow.svg" alt="" class="up-arrow"></button>
     </div>
     <script src="../static/js/script .js"></script>

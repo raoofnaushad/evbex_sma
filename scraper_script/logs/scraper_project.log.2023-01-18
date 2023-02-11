@@ -1,0 +1,938 @@
+2023-01-27 00:01:44,521 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:01:46,786 - root - ERROR - Some error with the link: https://www.evbex.com/6-ways-where-facilities-management-can-improve-mental-health-in-the-workplace/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:01:46,787 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:01:46,787 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:01:47,802 - root - ERROR - Some error with the link: https://www.evbex.com/leveraging-smart-kpis-to-improve-your-business-performance-through-people/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:01:47,802 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:01:47,802 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:01:48,890 - root - ERROR - Some error with the link: https://www.evbex.com/3-tech-trends-transforming-facility-management-in-2022/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:01:48,890 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:01:48,891 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:01:48,891 - __main__ - INFO - Scraped contents from EVBEX is: 0
+2023-01-27 00:01:48,892 - __main__ - INFO - No data scraped. Thus nothing to write
+2023-01-27 00:03:31,848 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:04:24,941 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:04:27,062 - root - ERROR - Some error with the link: https://www.evbex.com/6-ways-where-facilities-management-can-improve-mental-health-in-the-workplace/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:04:27,063 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:04:27,063 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:04:28,090 - root - ERROR - Some error with the link: https://www.evbex.com/leveraging-smart-kpis-to-improve-your-business-performance-through-people/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:04:28,091 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:04:28,091 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:04:29,037 - root - ERROR - Some error with the link: https://www.evbex.com/3-tech-trends-transforming-facility-management-in-2022/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:04:29,037 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:04:29,037 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:04:29,038 - __main__ - INFO - Scraped contents from EVBEX is: 0
+2023-01-27 00:04:29,039 - __main__ - INFO - No data scraped. Thus nothing to write
+2023-01-27 00:05:02,884 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:05:05,755 - root - ERROR - Some error with the link: https://www.evbex.com/6-ways-where-facilities-management-can-improve-mental-health-in-the-workplace/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:05:05,756 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:05:05,756 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+2023-01-27 00:05:07,207 - root - ERROR - Some error with the link: https://www.evbex.com/leveraging-smart-kpis-to-improve-your-business-performance-through-people/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:05:07,207 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:05:07,207 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601%20398'%3E%3C/svg%3E"
+2023-01-27 00:05:08,259 - root - ERROR - Some error with the link: https://www.evbex.com/3-tech-trends-transforming-facility-management-in-2022/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:05:08,259 - root - ERROR - Error: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:05:08,259 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 31, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201265%20844'%3E%3C/svg%3E"
+2023-01-27 00:05:08,260 - __main__ - INFO - Scraped contents from EVBEX is: 0
+2023-01-27 00:05:08,261 - __main__ - INFO - No data scraped. Thus nothing to write
+2023-01-27 00:12:34,563 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:12:37,447 - root - ERROR - Some error with the link: https://www.evbex.com/6-ways-where-facilities-management-can-improve-mental-health-in-the-workplace/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:37,448 - root - ERROR - Error: 'NoneType' object has no attribute 'img'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:37,448 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:38,849 - root - ERROR - Some error with the link: https://www.evbex.com/leveraging-smart-kpis-to-improve-your-business-performance-through-people/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:38,849 - root - ERROR - Error: 'NoneType' object has no attribute 'img'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:38,849 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:40,651 - root - ERROR - Some error with the link: https://www.evbex.com/3-tech-trends-transforming-facility-management-in-2022/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:40,651 - root - ERROR - Error: 'NoneType' object has no attribute 'img'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:40,651 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 29, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:12:40,652 - __main__ - INFO - Scraped contents from EVBEX is: 0
+2023-01-27 00:12:40,653 - __main__ - INFO - No data scraped. Thus nothing to write
+2023-01-27 00:14:48,664 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:17:23,057 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:17:52,487 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:19:50,322 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:19:53,409 - root - ERROR - Some error with the link: https://www.evbex.com/6-ways-where-facilities-management-can-improve-mental-health-in-the-workplace/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:19:53,409 - root - ERROR - Error: name 'img_path' is not defined
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:19:53,409 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:19:54,754 - root - ERROR - Some error with the link: https://www.evbex.com/leveraging-smart-kpis-to-improve-your-business-performance-through-people/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:19:54,754 - root - ERROR - Error: name 'img_path' is not defined
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:19:54,754 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:19:56,361 - root - ERROR - Some error with the link: https://www.evbex.com/3-tech-trends-transforming-facility-management-in-2022/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:19:56,362 - root - ERROR - Error: name 'img_path' is not defined
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:19:56,362 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 45, in scrape_each_article
+    "image": img_path,
+NameError: name 'img_path' is not defined
+2023-01-27 00:20:10,178 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:20:13,727 - root - ERROR - Some error with the link: https://www.evbex.com/6-ways-where-facilities-management-can-improve-mental-health-in-the-workplace/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:20:13,728 - root - ERROR - Error: 'NoneType' object has no attribute 'img'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:20:13,729 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:20:14,811 - root - ERROR - Some error with the link: https://www.evbex.com/leveraging-smart-kpis-to-improve-your-business-performance-through-people/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:20:14,811 - root - ERROR - Error: 'NoneType' object has no attribute 'img'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:20:14,812 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:20:16,524 - root - ERROR - Some error with the link: https://www.evbex.com/3-tech-trends-transforming-facility-management-in-2022/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:20:16,525 - root - ERROR - Error: 'NoneType' object has no attribute 'img'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:20:16,525 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 30, in scrape_each_article
+    img_src = article.find('div', class_='aux-media-frame aux-media-image aux-image-mask').img['src']
+AttributeError: 'NoneType' object has no attribute 'img'
+2023-01-27 00:21:34,432 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:21:42,730 - root - ERROR - Some error with the link: https://www.evbex.com/6-ways-where-facilities-management-can-improve-mental-health-in-the-workplace/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:21:42,746 - root - ERROR - Error: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:21:42,746 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:21:44,395 - root - ERROR - Some error with the link: https://www.evbex.com/leveraging-smart-kpis-to-improve-your-business-performance-through-people/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:21:44,395 - root - ERROR - Error: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:21:44,395 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:21:45,921 - root - ERROR - Some error with the link: https://www.evbex.com/3-tech-trends-transforming-facility-management-in-2022/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:21:45,922 - root - ERROR - Error: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:21:45,922 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant http://None?
+2023-01-27 00:22:49,305 - __main__ - INFO - Scraping EVBEX Journal
+2023-01-27 00:22:53,329 - root - ERROR - Some error with the link: https://www.evbex.com/6-ways-where-facilities-management-can-improve-mental-health-in-the-workplace/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="imageholder" class="attachment-full size-full wp-image-2385" data-lazy-src="https://www.evbex.com/wp-content/uploads/website/imageholder.jpg" decoding="async" height="500" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20500%20500\'%3E%3C/svg%3E" title="6 Ways Where Facilities Management Can Improve Mental Health in the Workplace 1" width="500"/><noscript><img alt="imageholder" class="attachment-full size-full wp-image-2385" decoding="async" height="500" src="https://www.evbex.com/wp-content/uploads/website/imageholder.jpg" title="6 Ways Where Facilities Management Can Improve Mental Health in the Workplace 1" width="500"/></noscript> </div>'
+2023-01-27 00:22:53,330 - root - ERROR - Error: No connection adapters were found for '<div class="elementor-image">\n<img alt="imageholder" class="attachment-full size-full wp-image-2385" data-lazy-src="https://www.evbex.com/wp-content/uploads/website/imageholder.jpg" decoding="async" height="500" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20500%20500\'%3E%3C/svg%3E" title="6 Ways Where Facilities Management Can Improve Mental Health in the Workplace 1" width="500"/><noscript><img alt="imageholder" class="attachment-full size-full wp-image-2385" decoding="async" height="500" src="https://www.evbex.com/wp-content/uploads/website/imageholder.jpg" title="6 Ways Where Facilities Management Can Improve Mental Health in the Workplace 1" width="500"/></noscript> </div>'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="imageholder" class="attachment-full size-full wp-image-2385" data-lazy-src="https://www.evbex.com/wp-content/uploads/website/imageholder.jpg" decoding="async" height="500" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20500%20500\'%3E%3C/svg%3E" title="6 Ways Where Facilities Management Can Improve Mental Health in the Workplace 1" width="500"/><noscript><img alt="imageholder" class="attachment-full size-full wp-image-2385" decoding="async" height="500" src="https://www.evbex.com/wp-content/uploads/website/imageholder.jpg" title="6 Ways Where Facilities Management Can Improve Mental Health in the Workplace 1" width="500"/></noscript> </div>'
+2023-01-27 00:22:53,330 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="imageholder" class="attachment-full size-full wp-image-2385" data-lazy-src="https://www.evbex.com/wp-content/uploads/website/imageholder.jpg" decoding="async" height="500" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20500%20500\'%3E%3C/svg%3E" title="6 Ways Where Facilities Management Can Improve Mental Health in the Workplace 1" width="500"/><noscript><img alt="imageholder" class="attachment-full size-full wp-image-2385" decoding="async" height="500" src="https://www.evbex.com/wp-content/uploads/website/imageholder.jpg" title="6 Ways Where Facilities Management Can Improve Mental Health in the Workplace 1" width="500"/></noscript> </div>'
+2023-01-27 00:22:57,584 - root - ERROR - Some error with the link: https://www.evbex.com/leveraging-smart-kpis-to-improve-your-business-performance-through-people/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="Leveraging SMART KPIs to Improve Your Business Performance through People 1" class="attachment-full size-full wp-image-5037" data-lazy-src="https://www.evbex.com/wp-content/uploads/h_one.jpg" decoding="async" height="398" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20601%20398\'%3E%3C/svg%3E" title="Leveraging SMART KPIs to Improve Your Business Performance through People 1" width="601"/><noscript><img alt="Leveraging SMART KPIs to Improve Your Business Performance through People 1" class="attachment-full size-full wp-image-5037" decoding="async" height="398" src="https://www.evbex.com/wp-content/uploads/h_one.jpg" title="Leveraging SMART KPIs to Improve Your Business Performance through People 1" width="601"/></noscript> </div>'
+2023-01-27 00:22:57,584 - root - ERROR - Error: No connection adapters were found for '<div class="elementor-image">\n<img alt="Leveraging SMART KPIs to Improve Your Business Performance through People 1" class="attachment-full size-full wp-image-5037" data-lazy-src="https://www.evbex.com/wp-content/uploads/h_one.jpg" decoding="async" height="398" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20601%20398\'%3E%3C/svg%3E" title="Leveraging SMART KPIs to Improve Your Business Performance through People 1" width="601"/><noscript><img alt="Leveraging SMART KPIs to Improve Your Business Performance through People 1" class="attachment-full size-full wp-image-5037" decoding="async" height="398" src="https://www.evbex.com/wp-content/uploads/h_one.jpg" title="Leveraging SMART KPIs to Improve Your Business Performance through People 1" width="601"/></noscript> </div>'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="Leveraging SMART KPIs to Improve Your Business Performance through People 1" class="attachment-full size-full wp-image-5037" data-lazy-src="https://www.evbex.com/wp-content/uploads/h_one.jpg" decoding="async" height="398" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20601%20398\'%3E%3C/svg%3E" title="Leveraging SMART KPIs to Improve Your Business Performance through People 1" width="601"/><noscript><img alt="Leveraging SMART KPIs to Improve Your Business Performance through People 1" class="attachment-full size-full wp-image-5037" decoding="async" height="398" src="https://www.evbex.com/wp-content/uploads/h_one.jpg" title="Leveraging SMART KPIs to Improve Your Business Performance through People 1" width="601"/></noscript> </div>'
+2023-01-27 00:22:57,584 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="Leveraging SMART KPIs to Improve Your Business Performance through People 1" class="attachment-full size-full wp-image-5037" data-lazy-src="https://www.evbex.com/wp-content/uploads/h_one.jpg" decoding="async" height="398" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%20601%20398\'%3E%3C/svg%3E" title="Leveraging SMART KPIs to Improve Your Business Performance through People 1" width="601"/><noscript><img alt="Leveraging SMART KPIs to Improve Your Business Performance through People 1" class="attachment-full size-full wp-image-5037" decoding="async" height="398" src="https://www.evbex.com/wp-content/uploads/h_one.jpg" title="Leveraging SMART KPIs to Improve Your Business Performance through People 1" width="601"/></noscript> </div>'
+2023-01-27 00:22:58,690 - root - ERROR - Some error with the link: https://www.evbex.com/3-tech-trends-transforming-facility-management-in-2022/
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="facility-management-technology" class="attachment-full size-full wp-image-4997" data-lazy-src="https://www.evbex.com/wp-content/uploads/guestblog.jpg" decoding="async" height="844" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%201265%20844\'%3E%3C/svg%3E" title="3 Tech Trends Transforming Facility Management in 2022 1" width="1265"/><noscript><img alt="facility-management-technology" class="attachment-full size-full wp-image-4997" decoding="async" height="844" src="https://www.evbex.com/wp-content/uploads/guestblog.jpg" title="3 Tech Trends Transforming Facility Management in 2022 1" width="1265"/></noscript> </div>'
+2023-01-27 00:22:58,691 - root - ERROR - Error: No connection adapters were found for '<div class="elementor-image">\n<img alt="facility-management-technology" class="attachment-full size-full wp-image-4997" data-lazy-src="https://www.evbex.com/wp-content/uploads/guestblog.jpg" decoding="async" height="844" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%201265%20844\'%3E%3C/svg%3E" title="3 Tech Trends Transforming Facility Management in 2022 1" width="1265"/><noscript><img alt="facility-management-technology" class="attachment-full size-full wp-image-4997" decoding="async" height="844" src="https://www.evbex.com/wp-content/uploads/guestblog.jpg" title="3 Tech Trends Transforming Facility Management in 2022 1" width="1265"/></noscript> </div>'
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="facility-management-technology" class="attachment-full size-full wp-image-4997" data-lazy-src="https://www.evbex.com/wp-content/uploads/guestblog.jpg" decoding="async" height="844" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%201265%20844\'%3E%3C/svg%3E" title="3 Tech Trends Transforming Facility Management in 2022 1" width="1265"/><noscript><img alt="facility-management-technology" class="attachment-full size-full wp-image-4997" decoding="async" height="844" src="https://www.evbex.com/wp-content/uploads/guestblog.jpg" title="3 Tech Trends Transforming Facility Management in 2022 1" width="1265"/></noscript> </div>'
+2023-01-27 00:22:58,691 - root - ERROR - ***************
+Traceback (most recent call last):
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/scrapers/evbex_scraping.py", line 32, in scrape_each_article
+    img_path = user_download(img_src, heading)
+  File "/home/raoof/Documents/evbex/evbex_sma/scraper_script/src/utils.py", line 54, in user_download
+    r = requests.get(url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+  File "/home/raoof/.local/lib/python3.8/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '<div class="elementor-image">\n<img alt="facility-management-technology" class="attachment-full size-full wp-image-4997" data-lazy-src="https://www.evbex.com/wp-content/uploads/guestblog.jpg" decoding="async" height="844" src="data:image/svg+xml,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20viewBox=\'0%200%201265%20844\'%3E%3C/svg%3E" title="3 Tech Trends Transforming Facility Management in 2022 1" width="1265"/><noscript><img alt="facility-management-technology" class="attachment-full size-full wp-image-4997" decoding="async" height="844" src="https://www.evbex.com/wp-content/uploads/guestblog.jpg" title="3 Tech Trends Transforming Facility Management in 2022 1" width="1265"/></noscript> </div>'

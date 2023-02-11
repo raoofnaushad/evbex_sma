@@ -63,6 +63,8 @@ class Scraper():
             if not self.contents:
                 logger.info(f'No data scraped. Thus nothing to write')
                 exit()
+                
+            self.contents = get_priority(self.contents)
             
             db = connect_mong()
             coll = db.newsletter
@@ -81,9 +83,6 @@ def start_scraping():
     contents = list()
     
     scrape = Scraper(contents)
-    
-    ## Scraping FMJ
-    scrape.contents.extend(scrape.scrape_news("FMJ"))
     
     ## Scraping PFMONTHNET
     scrape.contents.extend(scrape.scrape_news("PFM"))
@@ -109,17 +108,21 @@ def start_scraping():
     ## Scraping Evbex
     scrape.contents.extend(scrape.scrape_news("EVBEX"))
 
+    ## Scraping FMJ
+    scrape.contents.extend(scrape.scrape_news("FMJ"))
+    
+
     # Writing to DB
     scrape.write_news_to_db()
     
         
-    file = open("scrappedcontents.txt", "w")
-    file.writelines(f'Date: {today}\n')
-    file.writelines("###"*10)
-    file.writelines("\n")
-    for scrapped_articles in scrape.contents:
-        file.writelines(scrapped_articles["article"])
-        file.writelines('\n')
+    # file = open("scrappedcontents.txt", "w")
+    # file.writelines(f'Date: {today}\n')
+    # file.writelines("###"*10)
+    # file.writelines("\n")
+    # for scrapped_articles in scrape.contents:
+    #     file.writelines(scrapped_articles["article"])
+    #     file.writelines('\n')
 
 
 if __name__ == "__main__":

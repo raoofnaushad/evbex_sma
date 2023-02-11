@@ -19,9 +19,9 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        print("**********************")
-        print(link)
-        print("**********************")
+        # print("**********************")
+        # print(link)
+        # print("**********************")
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
         date_str  = article.find('div', class_='contentDate').text
@@ -29,11 +29,12 @@ def scrape_each_article(link):
 
         if date == today:
             heading = article.find('div', class_='contentHeading').h1.text
+            heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
+            
             img_src = article.find('div', class_='imgCENTRE').img['src']
             img_src = "https://www.tomorrowsfm.com/" + '/' + img_src
-            img_path = user_download(img_src, heading)
+            img_path = user_download(img_src, heading_cleaned)
 
-                
             article_content_main = article.find('div', class_='content')
             article_content_1 = article_content_main.find_all('p')[0].text        
             article_content_2 = article_content_main.find_all('p')[1].text        

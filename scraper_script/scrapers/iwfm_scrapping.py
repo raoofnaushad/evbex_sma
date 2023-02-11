@@ -24,14 +24,16 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        print("**********************")
-        print(link)
-        print("**********************")
+        # print("**********************")
+        # print(link)
+        # print("**********************")
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
         heading = article.find('div', class_ = "entry").h1.text
+        heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
+        
         img_src = article.find('div', class_ = "entry").img['src']
-        img_path = user_download(img_src, heading)
+        img_path = user_download(img_src, heading_cleaned)
         article_content = article.find_all('p')[3].text[:500]
         content = {
             "date" : today,

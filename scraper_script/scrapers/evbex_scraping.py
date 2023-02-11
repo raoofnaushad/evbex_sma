@@ -20,15 +20,14 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        print("**********************")
-        print(link)
-        print("**********************")
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
-        
+
         heading = article.h1.text
-        img_src = article.find('div', class_='elementor-image').img['src']
-        img_path = user_download(img_src, heading)
+        heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
+        img_div = article.find('div', class_='elementor-image')
+        img_src = img_div.find('img')['data-lazy-src']
+        img_path = user_download(img_src, heading_cleaned)
         
         article_contents = article.find_all('div', class_='aux-modern-heading-description')[:2]
         article_content = '\n'.join(para.text for para in article_contents) 
@@ -65,9 +64,10 @@ def main():
     articles = get_article_links(content)
     
     for article in articles:
+        # print(article)
         if scrape_each_article(article):
             contents.append(scrape_each_article(article))
 
     print(f"Number of articles from EVBEX: {len(contents)}")
-    
+    # exit()
     return contents

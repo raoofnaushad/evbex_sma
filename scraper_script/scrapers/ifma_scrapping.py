@@ -23,12 +23,14 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        print("**********************")
-        print(link)
-        print("**********************")
+        # print("**********************")
+        # print(link)
+        # print("**********************")
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
         heading = article.find('h1', class_ = "sfpostTitle").text
+        heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
+        
         img_src = article.find('a', class_="navbar-brand").img['src']
         img_path = '/'.join(os.path.abspath(os.getcwd()).split('/')[:-1]) + "/evbex/static/ifma.png"
         article_content_1 = article.find_all('p')[1].text        

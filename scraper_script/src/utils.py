@@ -5,6 +5,7 @@ from datetime import date
 from time import sleep
 from pymongo import MongoClient
 import requests
+import json
 
 from src.config import *
 
@@ -115,3 +116,23 @@ def format_iwfm_date(month, date, year):
     final_date = year + '-' + month + '-' + date
     
     return final_date
+
+
+def get_priority(contents):
+    new_contents = []
+    for each in contents:
+        if each['fmj'] == 0:
+            new_contents.append(each)
+    
+    for each in contents:
+        if each not in new_contents:
+            new_contents.append(each)
+            
+    try:
+        new_contents = new_contents[:5]
+    except:
+        new_contents = new_contents[:len(new_contents)]
+
+    print(json.dumps(new_contents))
+    # exit()
+    return new_contents

@@ -20,9 +20,9 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        print("**********************")
-        print(link)
-        print("**********************")
+        # print("**********************")
+        # print(link)
+        # print("**********************")
         content = get_html_content(link)
         soup = BeautifulSoup(content, 'lxml')
         
@@ -33,7 +33,10 @@ def scrape_each_article(link):
             heading = article.h1.text
             img_src = article.find('div', class_='articleimage').img['src']
             img_src = "https://www.pfmonthenet.net/" + '/'.join(img_src.split('/')[3:])
-            img_path = user_download(img_src, heading)
+            heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
+
+            
+            img_path = user_download(img_src, heading_cleaned)
             
             article_start = article.h3.text
             article_contents = article.find_all('p', class_='MsoNoSpacing')[0].text        
