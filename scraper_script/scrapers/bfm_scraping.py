@@ -25,9 +25,6 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        # print("**********************")
-        # print(link)
-        # print("**********************")
         content = get_html_content(link)
         soup = BeautifulSoup(content, 'lxml')
         
@@ -44,7 +41,6 @@ def scrape_each_article(link):
         article_content = article_content.split('\n')[0] + ' ' + article_content.split('\n')[1]
 
         article_name = heading 
-        # print(article_name)
         content = {
                     "date" : today,
                     "article": article_name,
@@ -54,7 +50,10 @@ def scrape_each_article(link):
                     "c2a_link": link,
                     "c2a_button": "Read from Source",
                     "evbex" : 0,
-                    "fmj" : 0
+                    "fmj" : 0,
+                    "bmf" : 1,
+                    "pfm" : 0,
+                    "ifma" : 0
                 }
         
         return content
@@ -74,7 +73,6 @@ def main():
     content = get_html_content(BFM_LINK)
     
     articles = get_article_links(content)
-
     for article in articles:
         out = scrape_each_article(article)
         if out:

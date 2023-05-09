@@ -44,7 +44,10 @@ def scrape_each_article(link):
                     "c2a_link": link,
                     "c2a_button": "Read from Source",
                     "evbex" : 1,
-                    "fmj" : 0
+                    "fmj" : 0,
+                    "bmf" : 0,
+                    "pfm" : 0,
+                    "ifma" : 0
                 }
         
         return content
@@ -58,13 +61,10 @@ def scrape_each_article(link):
 
 def main():
     contents = list()
-        
     content = get_html_content(EVBEX_LINK)
-    
     articles = get_article_links(content)
     
     for article in articles:
-        # print(article)
         if scrape_each_article(article):
             contents.append(scrape_each_article(article))
 

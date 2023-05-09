@@ -24,9 +24,6 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        # print("**********************")
-        # print(link)
-        # print("**********************")
         content = get_html_content(link)
         soup = BeautifulSoup(content, 'lxml')
         article = soup.find('article')
@@ -37,7 +34,6 @@ def scrape_each_article(link):
         img_src = img_src.img['data-lazy-src']
         
         img_path = user_download(img_src, heading_cleaned)
-        # print(img_path)
 
         
         article_contents = article.find_all('div', class_='entry')[:1]
@@ -55,7 +51,10 @@ def scrape_each_article(link):
                     "c2a_link": link,
                     "c2a_button": "Read from Source",
                     "evbex" : 0,
-                    "fmj" : 1
+                    "fmj" : 1,
+                    "bmf" : 0,
+                    "pfm" : 0,
+                    "ifma" : 0
                 }
         
         return content

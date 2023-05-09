@@ -20,9 +20,6 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        # print("**********************")
-        # print(link)
-        # print("**********************")
         content = get_html_content(link)
         soup = BeautifulSoup(content, 'lxml')
         
@@ -39,11 +36,15 @@ def scrape_each_article(link):
             img_path = user_download(img_src, heading_cleaned)
             
             article_start = article.h3.text
-            article_contents = article.find_all('p', class_='MsoNoSpacing')[0].text        
-            article_content = article_start + '\n' + article_contents 
+            article_contents = article.find_all('div')
+            for article in article_contents:
+                allSpans = article.find('span',  style='font-size: 13.3333px;')
+                if allSpans:
+                    text = allSpans.text.strip()
+                    article_content = article_start + '\n' + text   
+            # article_content = article_start + '\n' + text 
 
             article_name = heading 
-            # print(article_name)
             content = {
                         "date" : today,
                         "article": article_name,
@@ -53,7 +54,10 @@ def scrape_each_article(link):
                         "c2a_link": link,
                         "c2a_button": "Read from Source",
                         "evbex" : 0,
-                        "fmj" : 0
+                        "fmj" : 0,
+                        "bmf" : 0,
+                        "pfm" : 1,
+                        "ifma" : 0
                     }
             
             return content
@@ -70,7 +74,6 @@ def main():
     contents = list()
         
     content = get_html_content(PFMONTHNET)
-    
     articles = get_article_links(content)
     
     for article in articles:

@@ -19,9 +19,6 @@ def get_article_links(content):
 
 def scrape_each_article(link):
     try:
-        # print("**********************")
-        # print(link)
-        # print("**********************")
         content = get_html_content(link)
         article = BeautifulSoup(content, 'lxml')
         date_str  = article.find('div', class_='contentDate').text
@@ -51,7 +48,10 @@ def scrape_each_article(link):
                         "c2a_link": link,
                         "c2a_button": "Read from Source",
                         "evbex" : 0,
-                        "fmj" : 0
+                        "fmj" : 0,
+                        "bmf" : 0,
+                        "pfm" : 0,
+                        "ifma" : 0
                     }
 
             return content

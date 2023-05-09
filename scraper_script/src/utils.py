@@ -5,6 +5,7 @@ from datetime import date
 from time import sleep
 from pymongo import MongoClient
 import requests
+import random
 import json
 
 from src.config import *
@@ -39,7 +40,6 @@ def connect_mong():
     # database
     db = conn.social_media_automation
     return db
-
 
 def get_html_content(site):
     content = requests.get(site).text
@@ -119,20 +119,37 @@ def format_iwfm_date(month, date, year):
 
 
 def get_priority(contents):
+    evbex_contents = []
+    fmj_contents = []
+    bmf_contents = []
+    pfm_contents = []
+    ifma_contents = []
     new_contents = []
-    for each in contents:
-        if each['fmj'] == 0:
-            new_contents.append(each)
     
+    # Categorize contents based on flags
     for each in contents:
-        if each not in new_contents:
-            new_contents.append(each)
-            
-    try:
-        new_contents = new_contents[:5]
-    except:
-        new_contents = new_contents[:len(new_contents)]
-
+        if each['fmj'] == 1:
+            fmj_contents.append(each)
+        elif each['evbex'] == 1:
+            evbex_contents.append(each)
+        elif each['bmf'] == 1:
+            bmf_contents.append(each)
+        elif each['pfm'] == 1:
+            pfm_contents.append(each)
+        elif each['ifma'] == 1:
+            ifma_contents.append(each)
+    
+    # Select 2 evbex_contents if available
+    if len(evbex_contents) >= 2:
+        new_contents.extend(random.sample(evbex_contents, 2))
+    
+    # Select the remaining contents from other arrays
+    remaining = 3 - len(new_contents)
+    other_contents = fmj_contents + bmf_contents + pfm_contents + ifma_contents
+    if remaining > 0 and len(other_contents) > 0:
+        sampled = random.sample(other_contents, min(remaining, len(other_contents)))
+        random.shuffle(sampled)
+        new_contents.extend(sampled)
+    
     print(json.dumps(new_contents))
-    # exit()
     return new_contents

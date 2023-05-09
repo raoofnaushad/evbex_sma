@@ -1,4 +1,4 @@
-pymongo
-requests
-bs4
-lxml
+pymongo==4.1.1
+requests==2.27.1
+bs4==0.0.1
+lxml==4.9.1
