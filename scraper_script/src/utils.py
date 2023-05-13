@@ -117,6 +117,19 @@ def format_iwfm_date(month, date, year):
     
     return final_date
 
+def getfilteredContent(list1,list2,len_1,len_2):
+    filterd_content=[]
+    if len(list1)>len_1 and len(list2)>len_2:
+        filtered_list_1 = list1[:len_1]
+        filtered_list_2 = list2[:len_2]
+        filterd_content.extend(filtered_list_1+filtered_list_2)
+    else:
+        total_list = list1+list2
+        random.shuffle(total_list)
+        filterd_content.extend(total_list[:(len_1+len_2)])
+        
+    return filterd_content
+    
 
 def get_priority(contents):
     evbex_contents = []
@@ -124,6 +137,10 @@ def get_priority(contents):
     bmf_contents = []
     pfm_contents = []
     ifma_contents = []
+    tomorrow_contents = []
+    fmlink_contents = []
+    iwfm_contents = []
+    facmag_contents = []
     new_contents = []
     
     # Categorize contents based on flags
@@ -138,18 +155,36 @@ def get_priority(contents):
             pfm_contents.append(each)
         elif each['ifma'] == 1:
             ifma_contents.append(each)
+        elif each['tomorrow'] == 1:
+            tomorrow_contents.append(each)
+        elif each['fmlink'] == 1:
+            fmlink_contents.append(each)
+        elif each['iwfm'] == 1:
+            iwfm_contents.append(each)
+        elif each['facmag'] == 1:
+            facmag_contents.append(each)
+            
+    blog_list_1 = fmj_contents + bmf_contents + pfm_contents + ifma_contents
+    blog_list_2 = tomorrow_contents + fmlink_contents + iwfm_contents + facmag_contents
+    len_blog_1 = len(blog_list_1)
+    len_blog_2 = len(blog_list_2)
+    len_evbex_blog = len(evbex_contents)
     
-    # Select 2 evbex_contents if available
-    if len(evbex_contents) >= 2:
-        new_contents.extend(random.sample(evbex_contents, 2))
+    if len_evbex_blog > 0:
+        if len_evbex_blog >= 2:
+            random.shuffle(evbex_contents)
+            new_contents.extend(evbex_contents[:2])
+        else:
+            new_contents.extend(evbex_contents)
+            
+        remaining = 3 - len(new_contents)
+        high_priority_content_length = round(0.6*remaining)
+        low_priority_content_length = remaining-high_priority_content_length
+        filtered_content = getfilteredContent(blog_list_2, blog_list_1, high_priority_content_length, low_priority_content_length)
+        new_contents.extend(filtered_content)
     
-    # Select the remaining contents from other arrays
-    remaining = 3 - len(new_contents)
-    other_contents = fmj_contents + bmf_contents + pfm_contents + ifma_contents
-    if remaining > 0 and len(other_contents) > 0:
-        sampled = random.sample(other_contents, min(remaining, len(other_contents)))
-        random.shuffle(sampled)
-        new_contents.extend(sampled)
+    else:
+        new_contents.extend(getfilteredContent(blog_list_2, blog_list_1, 2, 1))
     
     print(json.dumps(new_contents))
     return new_contents
