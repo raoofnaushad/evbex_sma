@@ -2,6 +2,7 @@
 
 from src.utils import *
 from src.config import *
+import random
 from scrapers import fmj_scraping, iwfm_scrapping, pfm_scraping, bfm_scraping, evbex_scraping, ifma_scrapping, tomorrow_scraping,  facilitatemag, fmlink_scrapping
 
 
@@ -70,6 +71,7 @@ class Scraper():
             coll = db.newsletter
             coll.delete_many({"date" : today})
             logger.info(f"Data deleted from mongo for the date: {today}")
+            random.shuffle(self.contents)
             coll.insert_many(self.contents)
             logger.info(f"{len(self.contents)} number of data inserted to mongo for the date: {today}")
             

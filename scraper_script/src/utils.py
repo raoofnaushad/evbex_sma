@@ -42,7 +42,10 @@ def connect_mong():
     return db
 
 def get_html_content(site):
-    content = requests.get(site).text
+    headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+}
+    content = requests.get(site, headers=headers).text
     return content
 
 def string_present(str1, str2):
@@ -117,16 +120,16 @@ def format_iwfm_date(month, date, year):
     
     return final_date
 
-def getfilteredContent(list1,list2,len_1,len_2):
+def getfilteredContent(list1,list2,highPriorityContent_length,lowPriorityContent_legnth):
     filterd_content=[]
-    if len(list1)>len_1 and len(list2)>len_2:
-        filtered_list_1 = list1[:len_1]
-        filtered_list_2 = list2[:len_2]
+    if len(list1)>highPriorityContent_length and len(list2)>lowPriorityContent_legnth:
+        filtered_list_1 = list1[:highPriorityContent_length]
+        filtered_list_2 = list2[:lowPriorityContent_legnth]
         filterd_content.extend(filtered_list_1+filtered_list_2)
     else:
         total_list = list1+list2
         random.shuffle(total_list)
-        filterd_content.extend(total_list[:(len_1+len_2)])
+        filterd_content.extend(total_list[:(highPriorityContent_length+lowPriorityContent_legnth)])
         
     return filterd_content
     
@@ -177,7 +180,7 @@ def get_priority(contents):
         else:
             new_contents.extend(evbex_contents)
             
-        remaining = 3 - len(new_contents)
+        remaining = 5 - len(new_contents)
         high_priority_content_length = round(0.6*remaining)
         low_priority_content_length = remaining-high_priority_content_length
         filtered_content = getfilteredContent(blog_list_2, blog_list_1, high_priority_content_length, low_priority_content_length)
