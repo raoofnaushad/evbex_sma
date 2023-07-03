@@ -126,6 +126,12 @@ def getfilteredContent(list1,list2,highPriorityContent_length,lowPriorityContent
         filtered_list_1 = list1[:highPriorityContent_length]
         filtered_list_2 = list2[:lowPriorityContent_legnth]
         filterd_content.extend(filtered_list_1+filtered_list_2)
+    elif (len(list1) > 0):
+        filtered_list_1 = list1
+        # A total of 5 blogs are there excluding evbex blogs, as his requrement is to show 5 blogs from other Jonor=uals and 2 from evbex
+        left_blog_count = 5 - len(list1) 
+        filtered_list_2 = list2[:left_blog_count]
+        filterd_content.extend(filtered_list_1+filtered_list_2)
     else:
         total_list = list1+list2
         random.shuffle(total_list)
@@ -167,8 +173,8 @@ def get_priority(contents):
         elif each['facmag'] == 1:
             facmag_contents.append(each)
             
-    blog_list_1 = fmj_contents + bmf_contents + pfm_contents + ifma_contents
-    blog_list_2 = tomorrow_contents + fmlink_contents + iwfm_contents + facmag_contents
+    blog_list_1 = fmj_contents + bmf_contents + ifma_contents
+    blog_list_2 = tomorrow_contents + fmlink_contents + iwfm_contents + facmag_contents + pfm_contents
     len_blog_1 = len(blog_list_1)
     len_blog_2 = len(blog_list_2)
     len_evbex_blog = len(evbex_contents)
@@ -180,7 +186,7 @@ def get_priority(contents):
         else:
             new_contents.extend(evbex_contents)
             
-        remaining = 5 - len(new_contents)
+        remaining = 7 - len(new_contents)
         high_priority_content_length = round(0.6*remaining)
         low_priority_content_length = remaining-high_priority_content_length
         filtered_content = getfilteredContent(blog_list_2, blog_list_1, high_priority_content_length, low_priority_content_length)

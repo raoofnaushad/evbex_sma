@@ -14,7 +14,8 @@ def get_article_links(content):
     for article in articles:
         article_links.append(article.a['href'])
             
-    return article_links[:3]
+    # We are taking 7 blogs from evbex and getting random blogs. It is just a random number
+    return article_links[:7] 
 
 
 
