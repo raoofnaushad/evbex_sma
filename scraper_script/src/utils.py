@@ -1,12 +1,16 @@
 import os
 from  configparser import SafeConfigParser
 import logging.config
-from datetime import date
+from datetime import date, timedelta, datetime
 from time import sleep
 from pymongo import MongoClient
 import requests
 import random
 import json
+from PIL import Image
+from io import BytesIO
+
+from colorama import Fore, Back, Style
 
 from src.config import *
 
@@ -54,13 +58,22 @@ def string_present(str1, str2):
     
     
 def user_download(url, filename):
-    r = requests.get(url)
+    headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+}
+    r = requests.get(url,headers=headers)
+
+    # Check if the response was successful
+    if r.status_code != 200:
+        raise Exception("Error occurred while downloading the image")
+
     base_path = '/'.join(os.path.abspath(os.getcwd()).split('/')[:-1]) + IMG_PATH
-    # filename = filename.replace('/', '_')
-    # filename = filename.replace(' ', '')
     out_path = base_path + filename + ".png"
-    with open(out_path, 'wb') as f:
-        f.write(r.content)
+
+    # Convert WebP image to PNG
+    with Image.open(BytesIO(r.content)) as img:
+        img.save(out_path, "PNG")
+
     return out_path
 
 def format_pfm_date(date):
@@ -89,6 +102,13 @@ def format_facilitate_date(date):
     final_date = year + '-' + month + '-' + day
     
     return final_date
+
+def format_fmi_date(date_string):
+    # Parse the input date string
+    date_object = datetime.strptime(date_string, "%d %B %Y")
+    # Format the date in the desired format
+    formatted_date = date_object.strftime("%Y-%m-%d")
+    return formatted_date
     
 
 def format_bfm_date(date):
@@ -150,6 +170,7 @@ def get_priority(contents):
     fmlink_contents = []
     iwfm_contents = []
     facmag_contents = []
+    fmi_contents = []
     new_contents = []
     
     # Categorize contents based on flags
@@ -172,17 +193,34 @@ def get_priority(contents):
             iwfm_contents.append(each)
         elif each['facmag'] == 1:
             facmag_contents.append(each)
+        elif each['fmi'] == 1:
+            fmi_contents.append(each)
             
     blog_list_1 = fmj_contents + bmf_contents + ifma_contents
-    blog_list_2 = tomorrow_contents + fmlink_contents + iwfm_contents + facmag_contents + pfm_contents
-    len_blog_1 = len(blog_list_1)
-    len_blog_2 = len(blog_list_2)
+    blog_list_2 = tomorrow_contents + fmlink_contents + iwfm_contents + facmag_contents + pfm_contents + fmi_contents
+    print(Fore.YELLOW + Back.BLUE +"Min priority Blog Length:", len(blog_list_1))
+    print(Fore.YELLOW + Back.BLUE +"Max priority Blog Length:", len(blog_list_2), Style.RESET_ALL)
     len_evbex_blog = len(evbex_contents)
     
     if len_evbex_blog > 0:
         if len_evbex_blog >= 2:
             random.shuffle(evbex_contents)
             new_contents.extend(evbex_contents[:2])
+            # yesterday = datetime.now().date() - timedelta(days=1)
+            # query = {"date": str(yesterday), "evbex": 1}
+            # db = connect_mong()
+            # coll = db.newsletter
+            # result = coll.find(query)
+            # db_data = [doc for doc in result]
+            # print('================================================================')
+            # print(db_data)
+            # print('================================================================')
+            # filtered_data = [data for data in evbex_contents if data not in db_data]
+            # print('****************************************************************')
+            # print(filtered_data)
+            # print('****************************************************************')
+            # random.shuffle(filtered_data)
+            # new_contents.extend(filtered_data[:2])
         else:
             new_contents.extend(evbex_contents)
             

@@ -55,7 +55,8 @@ def scrape_each_article(link):
                         "tomorrow" : 1,
                         "fmlink" : 0,
                         "iwfm" : 0,
-                        "facmag" : 0
+                        "facmag" : 0,
+                        "fmi" : 0
 
                     }
 

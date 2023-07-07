@@ -57,7 +57,8 @@ def scrape_each_article(link):
                         "fmj" : 0,
                         "bmf" : 0,
                         "pfm" : 1,
-                        "ifma" : 0
+                        "ifma" : 0,
+                        "fmi" : 0
                     }
             
             return content

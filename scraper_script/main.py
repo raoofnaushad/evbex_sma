@@ -3,7 +3,7 @@
 from src.utils import *
 from src.config import *
 import random
-from scrapers import fmj_scraping, iwfm_scrapping, pfm_scraping, bfm_scraping, evbex_scraping, ifma_scrapping, tomorrow_scraping,  facilitatemag, fmlink_scrapping
+from scrapers import fmj_scraping, iwfm_scrapping, pfm_scraping, bfm_scraping, evbex_scraping, ifma_scrapping, tomorrow_scraping,  facilitatemag, fmlink_scrapping, fmi_scrapping
 
 
 class Scraper():
@@ -18,6 +18,11 @@ class Scraper():
             if site == "FMJ":
                 logger.info("Scraping FMJ Journal")
                 scraped = fmj_scraping.main()
+                
+            
+            elif site == "FMI":
+                logger.info("Scraping FMI Journal")
+                scraped = fmi_scrapping.main()
                 
             elif site == "PFM":
                 logger.info("Scraping PFMonthnet Journal")
@@ -112,6 +117,9 @@ def start_scraping():
 
     ## Scraping FMJ
     scrape.contents.extend(scrape.scrape_news("FMJ"))
+    
+    ## Scraping FMI
+    scrape.contents.extend(scrape.scrape_news("FMI"))
     
 
     # Writing to DB
