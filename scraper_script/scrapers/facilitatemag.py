@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from src.config import *
 from src.utils import *
 
+
 bad_chars = [';', ':', '!', "*", "'", "\n", "‘", "’"]
 
 def get_article_links(content):
@@ -12,8 +13,8 @@ def get_article_links(content):
     
     posts = soup.find_all('div', class_="teaser__content")
     for post in posts:
-        date = post.find('div', class_="teaser__content-main__header__date")
-        formatted_date = format_facilitate_date(date.span.text)
+        date = post.find('span', class_="date-created")
+        formatted_date = format_facilitate_date(date.text)
         if formatted_date == today:
             article_links.append("https://www.facilitatemagazine.com"+post.a['href'])
     
