@@ -231,7 +231,7 @@ def get_priority(contents):
         new_contents.extend(filtered_content)
     
     else:
-        new_contents.extend(getfilteredContent(blog_list_2, blog_list_1, 2, 1))
+        new_contents.extend(getfilteredContent(blog_list_2, blog_list_1, 3, 2))
     
     print(json.dumps(new_contents))
     return new_contents
