@@ -142,7 +142,7 @@ def format_iwfm_date(month, date, year):
 
 def getfilteredContent(list1,list2,highPriorityContent_length,lowPriorityContent_legnth):
     filterd_content=[]
-    if len(list1)>highPriorityContent_length and len(list2)>lowPriorityContent_legnth:
+    if len(list1)>highPriorityContent_length and len(list2)>=lowPriorityContent_legnth:
         filtered_list_1 = list1[:highPriorityContent_length]
         filtered_list_2 = list2[:lowPriorityContent_legnth]
         filterd_content.extend(filtered_list_1+filtered_list_2)
