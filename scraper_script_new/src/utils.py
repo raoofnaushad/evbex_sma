@@ -50,7 +50,8 @@ def get_html_content(site):
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
     # print(content)
-    content = requests.get(site, headers=headers).text
+    # content = requests.get(site, headers=headers).text
+    content = requests.get(site).text
     return content
 
 def string_present(str1, str2):
@@ -58,11 +59,11 @@ def string_present(str1, str2):
         return True
     
     
-def user_download(url, filename):
+def user_download(url, filename, isHeadersNeeded=True):
     headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
-    r = requests.get(url,headers=headers)
+    r = isHeadersNeeded if requests.get(url,headers=headers) else requests.get(url)
 
     # Check if the response was successful
     if r.status_code != 200:
@@ -152,6 +153,13 @@ def format_upkeep_date(date_string):
     formatted_date = date_obj.strftime('%Y-%m-%d')
     
     return formatted_date
+
+def format_qad_date(date_string):
+    date_obj = datetime.strptime(date_string, '%B %d, %Y')
+    formatted_date = date_obj.strftime('%Y-%m-%d')
+    
+    return formatted_date
+
 def format_upkeep_date_togetData(date_string):
     date_string = date_string.replace('Published on ', '')
     

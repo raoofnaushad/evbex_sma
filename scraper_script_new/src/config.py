@@ -1,6 +1,7 @@
 UPKEEP_LINK = "https://www.upkeep.com/resources/blog/"
-# LUSHA_LINK = "https://www.lusha.com"
+# LUSHA_LINK = "https://www.lusha.com" Nginx forbidden
 FMI_LINK = "https://fmindustry.com/category/news/"
+QAD_LINK = "https://www.qad.com/blog/"
 
 
 EVBEX_LINK = "https://www.evbex.com/blogs-fm-platform/"
