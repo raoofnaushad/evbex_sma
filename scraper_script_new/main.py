@@ -37,7 +37,7 @@ class Scraper():
                 logger.info(f'No data scraped. Thus nothing to write')
                 exit()
                 
-            self.contents = get_priority(self.contents)
+            self.contents = get_priority(self.contents) # To add previous data
             
             db = connect_mong()
             coll = db.new_newsletter

@@ -14,7 +14,8 @@ def get_article_links(content):
         formatted_date = format_upkeep_date(str(date_string))
         # if True: # To add previous data
         if formatted_date==today:
-            article_link=article.find('a', class_='CallToActionstyled__ExternalLink-sc-2h7j2i-1')
+            article_link=article.find_all('a')[0]
+            # article_link=article.find_all('a', class_='CallToActionstyled__ExternalLink-sc-2h7j2i-1')
             formatted_link = "https://www.upkeep.com"+article_link.get('href')+'/'
             article_links.append(formatted_link)
     return article_links
@@ -30,6 +31,9 @@ def scrape_each_article_getData(link): # To add previous data
         post_date = article.find('div',class_='publish_date').text
         formatted_date = format_upkeep_date_togetData(str(post_date))
         print('Adding blogs of date:',formatted_date)
+        db = connect_mong()
+        coll = db.new_newsletter
+        coll.delete_many({"date" : formatted_date})
         heading = article.h1.text
         heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
         img_tag = soup.find('img', attrs={'data-src': True})
@@ -116,8 +120,8 @@ def scrape_each_article(link):
 
 def main():
     contents = list()
-        
-    content = get_html_content(UPKEEP_LINK)
+    content = get_html_content(UPKEEP_LINK, False)
+
     articles = get_article_links(content)
     for article in articles:
         content = scrape_each_article(article)

@@ -45,13 +45,16 @@ def connect_mong():
     db = conn.social_media_automation
     return db
 
-def get_html_content(site):
+def get_html_content(site, isHeadersNeeded=True):
     headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
     # print(content)
-    # content = requests.get(site, headers=headers).text
-    content = requests.get(site).text
+    if isHeadersNeeded:
+        content=requests.get(site, headers=headers).text
+    else:
+        content=requests.get(site).text
+   
     return content
 
 def string_present(str1, str2):
@@ -63,7 +66,10 @@ def user_download(url, filename, isHeadersNeeded=True):
     headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
-    r = isHeadersNeeded if requests.get(url,headers=headers) else requests.get(url)
+    if isHeadersNeeded:
+        r=requests.get(url,headers=headers)
+    else:
+        r=requests.get(url)
 
     # Check if the response was successful
     if r.status_code != 200:
