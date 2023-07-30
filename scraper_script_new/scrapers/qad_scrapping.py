@@ -83,8 +83,8 @@ def scrape_each_article_getData(link): # To add previous data
         formatted_date = format_qad_date(str(date))
         db = connect_mong()
         coll = db.new_newsletter
-        coll.delete_many({"date" : formatted_date})
-        print('Adding blogs of '+ formatted_date)
+        coll.delete_many({"date" : formatted_date, "iwfm" : 1})
+        print('Adding blogs of date'+ formatted_date)
         heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
         img_tag = soup.find('img', class_='vc_single_image-img')
         # Get the value of the 'data-src' attribute

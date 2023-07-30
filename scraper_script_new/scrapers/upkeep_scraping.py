@@ -33,7 +33,7 @@ def scrape_each_article_getData(link): # To add previous data
         print('Adding blogs of date:',formatted_date)
         db = connect_mong()
         coll = db.new_newsletter
-        coll.delete_many({"date" : formatted_date})
+        coll.delete_many({"date" : formatted_date, "fmj":1})
         heading = article.h1.text
         heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
         img_tag = soup.find('img', attrs={'data-src': True})
