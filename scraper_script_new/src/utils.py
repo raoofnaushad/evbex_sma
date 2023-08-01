@@ -177,6 +177,16 @@ def format_upkeep_date_togetData(date_string):
     
     return formatted_date
 
+def format_facilio_date(input_date): #Input "Jul 28, 2023" -> Output: "2023-07-28"
+    try:
+        # Parse the input date string into a datetime object
+        date_obj = datetime.strptime(input_date, '%b %d, %Y')
+        # Format the date object into the desired output format
+        formatted_date = date_obj.strftime('%Y-%m-%d')
+        return formatted_date
+    except ValueError:
+        return "Invalid date format. Please provide a date in the format 'Jul 28, 2023'."
+
 def getfilteredContent(list1,list2,highPriorityContent_length,lowPriorityContent_legnth):
     filterd_content=[]
     if len(list1)>highPriorityContent_length and len(list2)>lowPriorityContent_legnth:

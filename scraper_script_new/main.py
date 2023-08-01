@@ -3,7 +3,7 @@
 from src.utils import *
 from src.config import *
 import random
-from scrapers import upkeep_scraping, fmi_scrapping, qad_scrapping
+from scrapers import upkeep_scraping, fmi_scrapping, qad_scrapping, facilio_scrapping
 
 class Scraper():
     def __init__(self, contents):
@@ -21,6 +21,10 @@ class Scraper():
             elif site == "QAD":
                 logger.info("Scraping QAD Journal")
                 scraped = qad_scrapping.main()
+                
+            elif site == "FACILIO":
+                logger.info("Scraping FACILIO Journal")
+                scraped = facilio_scrapping.main()
 
                 
             logger.info(f"Scraped contents from {site} is: {len(scraped)}")
@@ -60,6 +64,9 @@ def start_scraping():
     
     ## Scraping UPKEEP
     scrape.contents.extend(scrape.scrape_news("UPKEEP"))
+    
+    ## Scraping UPKEEP
+    scrape.contents.extend(scrape.scrape_news("FACILIO"))
     
     # Scraping QAD
     scrape.contents.extend(scrape.scrape_news("QAD"))
