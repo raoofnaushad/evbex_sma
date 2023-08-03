@@ -13,8 +13,11 @@ except:
 # database
 db = conn.social_media_automation
 
-def get_data_from_mongo(date):
-    collection = db.newsletter
+def get_data_from_mongo(date, isAPACRegion):
+    if isAPACRegion:
+        collection = db.new_newsletter
+    else:
+        collection = db.newsletter
     data = collection.find({"date" : date}) #initially it was today
     data = date_reverse(data)
     data = img_path_correction(data)

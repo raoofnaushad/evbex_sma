@@ -916,3 +916,52 @@ input::selection{
         font-size: 20px;
     }
 }
+/* Styles for the toggle button */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Hide the default checkbox */
+  .toggle input {
+    display: none;
+  }
+  
+  /* Styling for the slider */
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the slider when the checkbox is checked */
+  .slider:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: 0.4s;
+  }
+  
+  /* When the checkbox is checked, move the slider to the right and change the color */
+  input:checked + .slider:before {
+    transform: translateX(30px);
+    background-color: rgb(225, 229, 225);
+  }
+  
+  /* Change the background color of the slider when the checkbox is checked */
+  input:checked + .slider {
+    background-color: green;
+  }
+  

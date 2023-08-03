@@ -44,6 +44,14 @@
                     <button type="submit" class="show-content">Show Content</button>
                 </form>
             </div>
+            <label class="toggle" >
+                {% if isAPACRegion == True %}
+                <input type="checkbox" onchange="toggleFunction()" checked>
+                {% else %}
+                <input type="checkbox" onchange="toggleFunction()">
+                {% endif %}
+                <span class="slider"></span>
+            </label>
         </div>
     </div>
     <div class="hot-service">
@@ -114,7 +122,7 @@
             <button id="6" class="slide-control"></button>
         </div>
     </div>
-    <div class="posts">
+      <div class="posts">
         {% for news in newses %}
         <div class="post">
             <div class="post-container">

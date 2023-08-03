@@ -183,6 +183,16 @@ const successNoti = document.querySelector(".success-message");
 function closeSuccessNoti(){
     successNoti.style.display = 'none';
 }
+function toggleFunction() {
+    fetch('/change-region', { method: 'POST' })
+    .then(response => response.json())
+    .then(data => {
+        window.location.reload();
+    });
+    toggleState = !toggleState;
+    const toggleValueElement = document.getElementById("toggleValue");
+    toggleValueElement.textContent = toggleState ? "True" : "False";
+  }
 
 
 //services button dropdown 
