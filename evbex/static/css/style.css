@@ -965,3 +965,40 @@ input::selection{
     background-color: green;
   }
   
+  .tab-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+ /* Styles for the toast container */
+ #toast-container {
+    position: fixed;
+      bottom: 0;
+      right: 5%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+  }
+  /* Styles for the toast */
+  .toast {
+      display: none;
+      padding: 25px 25px;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  
+  .toast.success {
+      background-color: #28a745;
+  }
+  
+  .toast.error {
+      background-color: #dc3545;
+  }

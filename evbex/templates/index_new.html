@@ -11,6 +11,7 @@
 </head>
 
 <body id="theBody">
+    <div id="toast-container"></div>
     <div class="toppest-element"></div>
     <div class="navbar">
         <div class="primary-navbar">
@@ -44,14 +45,15 @@
                     <button type="submit" class="show-content">Show Content</button>
                 </form>
             </div>
-            <label class="toggle" >
-                {% if isAPACRegion == True %}
-                <input type="checkbox" onchange="toggleFunction()" checked>
-                {% else %}
-                <input type="checkbox" onchange="toggleFunction()">
-                {% endif %}
-                <span class="slider"></span>
-            </label>
+            <div class="tabs-container">
+            {% if isAPACRegion == False %}
+        <button class="tab-button active" onclick="toggleFunction('UK')">UK Region</button>
+        <button class="tab-button" onclick="toggleFunction('APAC')">APAC Region</button>
+        {% else %}
+        <button class="tab-button" onclick="toggleFunction('UK')">UK Region</button>
+        <button class="tab-button active" onclick="toggleFunction('APAC')">APAC Region</button>
+        {% endif %}
+    </div>
         </div>
     </div>
     <div class="hot-service">
@@ -375,5 +377,49 @@
     </div>
     <script src="../static/js/script .js"></script>
 </body>
+<script>
+function showTab(region) {
+    // Deactivate all tab buttons
+    const tabButtons = document.getElementsByClassName('tab-button');
+    for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('active');
+    }
 
+    // Activate the clicked button
+    const clickedButton = document.querySelector(`button.tab-button[onclick="showTab('${region}')"]`);
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
+
+}
+
+function showToast(message, type) {
+    // Create a new toast element
+    const toast = document.createElement('div');
+    toast.classList.add('toast', type);
+    toast.textContent = message;
+
+    // Append the toast to the toast container
+    const toastContainer = document.getElementById('toast-container');
+    toastContainer.appendChild(toast);
+
+    // Show the toast with a fade-in effect
+    setTimeout(() => {
+        toast.style.display = 'block';
+        setTimeout(() => {
+            toast.style.opacity = 1;
+        }, 10);
+    }, 10);
+
+    // Hide the toast with a fade-out effect after 3 seconds
+    setTimeout(() => {
+        toast.style.opacity = 0;
+        setTimeout(() => {
+            toast.style.display = 'none';
+            toast.remove();
+        }, 500);
+    }, 3000);
+}
+  
+  </script>
 </html>

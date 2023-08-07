@@ -183,15 +183,31 @@ const successNoti = document.querySelector(".success-message");
 function closeSuccessNoti(){
     successNoti.style.display = 'none';
 }
-function toggleFunction() {
+let regionTemp=localStorage.getItem('selectedRegion');
+function toggleFunction(region) {
+    if(regionTemp==region)
+        return
+    regionTemp = region
+    localStorage.setItem('selectedRegion', region);
     fetch('/change-region', { method: 'POST' })
     .then(response => response.json())
     .then(data => {
-        window.location.reload();
+        showToast(`Region switched to ${region}`, 'success')
+        setTimeout(()=>{
+            window.location.reload();
+        },1500)
     });
-    toggleState = !toggleState;
-    const toggleValueElement = document.getElementById("toggleValue");
-    toggleValueElement.textContent = toggleState ? "True" : "False";
+    const tabButtons = document.getElementsByClassName('tab-button');
+    for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('active');
+    }
+
+    // Activate the clicked button
+    const clickedButton = document.querySelector(`button.tab-button[onclick="showTab('${region}')"]`);
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
+
   }
 
 
