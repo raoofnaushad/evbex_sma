@@ -803,6 +803,13 @@ input::selection{
         height: 450px;
     }
 }
+
+@media only screen and (max-width: 728px) {
+    .tab-button {
+        padding: 3px 4px !important;
+    }
+}
+
 @media screen and (max-width: 490px){}
 .white-paper-section{
     display: flex;
