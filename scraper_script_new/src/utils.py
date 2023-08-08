@@ -186,6 +186,13 @@ def format_facilio_date(input_date): #Input "Jul 28, 2023" -> Output: "2023-07-2
         return formatted_date
     except ValueError:
         return "Invalid date format. Please provide a date in the format 'Jul 28, 2023'."
+    
+def format_facilitiesnet_date(date_string):
+    # Convert input date string to a datetime object
+    input_date = datetime.strptime(date_string, '%m/%d/%Y')    
+    # Format the datetime object as 'YYYY-MM-DD'
+    formatted_date = input_date.strftime('%Y-%m-%d')    
+    return formatted_date
 
 def getfilteredContent(list1,list2,highPriorityContent_length,lowPriorityContent_legnth):
     filterd_content=[]

@@ -45,7 +45,7 @@
                     <button type="submit" class="show-content">Show Content</button>
                 </form>
             </div>
-            <div class="tabs-container">
+            <!-- <div class="tabs-container">
             {% if isAPACRegion == False %}
         <button class="tab-button active" onclick="toggleFunction('UK')">UK Region</button>
         <button class="tab-button" onclick="toggleFunction('APAC')">APAC Region</button>
@@ -53,7 +53,7 @@
         <button class="tab-button" onclick="toggleFunction('UK')">UK Region</button>
         <button class="tab-button active" onclick="toggleFunction('APAC')">APAC Region</button>
         {% endif %}
-    </div>
+    </div> -->
         </div>
     </div>
     <div class="hot-service">
@@ -122,6 +122,21 @@
             <button id="4" class="slide-control"></button>
             <button id="5" class="slide-control"></button>
             <button id="6" class="slide-control"></button>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; padding: 20px;">
+        <div style="width: 909px;">
+            <p style="font-size: 18px; font-weight: 600; color: rgb(66, 66, 66);">Select Region:</p>
+            <div class="tabs-container" style="display: flex;justify-content: space-between;">
+                {% if isAPACRegion == False %}
+                <button class="tab-button active" style="width: 100%;" onclick="toggleFunction('UK')">UK Region</button>
+                <button class="tab-button" style="width: 100%;" onclick="toggleFunction('APAC')">APAC Region</button>
+                {% else %}
+                <button class="tab-button" style="width: 100%;" onclick="toggleFunction('UK')">UK Region</button>
+                <button class="tab-button active" style="width: 100%;" onclick="toggleFunction('APAC')">APAC Region</button>
+                {% endif %}
+            </div>
         </div>
     </div>
       <div class="posts">

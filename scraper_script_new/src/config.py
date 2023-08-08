@@ -3,6 +3,7 @@ UPKEEP_LINK = "https://www.upkeep.com/resources/blog/"
 FMI_LINK = "https://fmindustry.com/category/news/"
 QAD_LINK = "https://www.qad.com/blog/"
 FACILIO_LINK = "https://facilio.com/blog/"
+FACILITIESNET_LINK = "https://www.facilitiesnet.com/site/pressreleasepages.aspx"
 
 
 EVBEX_LINK = "https://www.evbex.com/blogs-fm-platform/"
