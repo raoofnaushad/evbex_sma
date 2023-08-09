@@ -130,11 +130,11 @@
             <p style="font-size: 18px; font-weight: 600; color: rgb(66, 66, 66);">Select Region:</p>
             <div class="tabs-container" style="display: flex;justify-content: space-between;">
                 {% if isAPACRegion == False %}
-                <button class="tab-button active" style="width: 100%;" onclick="toggleFunction('UK')">UK Region</button>
-                <button class="tab-button" style="width: 100%;" onclick="toggleFunction('APAC')">APAC Region</button>
+                <button id="uk-blogs" class="tab-button active" style="width: 100%;" onclick="toggleFunction('UK')"disabled>UK Region</button>
+                <button id="apac-blogs" class="tab-button" style="width: 100%;" onclick="toggleFunction('APAC')">APAC Region</button>
                 {% else %}
-                <button class="tab-button" style="width: 100%;" onclick="toggleFunction('UK')">UK Region</button>
-                <button class="tab-button active" style="width: 100%;" onclick="toggleFunction('APAC')">APAC Region</button>
+                <button id="uk-blogs" class="tab-button" style="width: 100%;" onclick="toggleFunction('UK')">UK Region</button>
+                <button id="apac-blogs" class="tab-button active" style="width: 100%;" onclick="toggleFunction('APAC')" disabled>APAC Region</button>
                 {% endif %}
             </div>
         </div>

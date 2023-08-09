@@ -183,11 +183,21 @@ const successNoti = document.querySelector(".success-message");
 function closeSuccessNoti(){
     successNoti.style.display = 'none';
 }
-let regionTemp=localStorage.getItem('selectedRegion');
+
+let regionTemp=localStorage.getItem('selectedRegion')
 function toggleFunction(region) {
-    if(regionTemp==region)
-        return
-    regionTemp = region
+    if(region=="UK"){
+        document.getElementById("uk-blogs").disabled=true
+        document.getElementById("apac-blogs").disabled=false
+    }
+    if(region=="APAC")
+    {
+        document.getElementById("apac-blogs").disabled=true
+        document.getElementById("uk-blogs").disabled=false
+    }
+    // if(regionTemp==region)
+    //     return
+    // regionTemp = region
     localStorage.setItem('selectedRegion', region);
     fetch('/change-region', { method: 'POST' })
     .then(response => response.json())
