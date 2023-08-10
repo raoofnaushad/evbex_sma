@@ -103,7 +103,8 @@ def scrape_each_article_getData(link): # To add previous data
                     "c2a_button": "Read from Source",
                     "facilio" : 0,
                     "qad" : 0,
-                    "facilitiesnet" : 1,
+                    "fmnaz" : 1,
+                    "facilitiesnet" : 0,
                     "upkeep" : 0
                 }
         
