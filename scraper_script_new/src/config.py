@@ -4,6 +4,7 @@ FMI_LINK = "https://fmindustry.com/category/news/"
 QAD_LINK = "https://www.qad.com/blog/"
 FACILIO_LINK = "https://facilio.com/blog/"
 FACILITIESNET_LINK = "https://www.facilitiesnet.com/site/pressreleasepages.aspx"
+FMNAZ_LINK="https://www.fmanz.org/news-and-insights/"
 
 
 EVBEX_LINK = "https://www.evbex.com/blogs-fm-platform/"

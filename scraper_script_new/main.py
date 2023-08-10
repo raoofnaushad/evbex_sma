@@ -3,7 +3,7 @@
 from src.utils import *
 from src.config import *
 import random
-from scrapers import upkeep_scraping, fmi_scrapping, qad_scrapping, facilio_scrapping, facilitiesnet_scrapping
+from scrapers import upkeep_scraping, fmi_scrapping, qad_scrapping, facilio_scrapping, facilitiesnet_scrapping, fmnaz_scrapping
 
 class Scraper():
     def __init__(self, contents):
@@ -29,6 +29,10 @@ class Scraper():
             elif site == "FACILIESNET":
                 logger.info("Scraping FACILIESNET Journal")
                 scraped = facilitiesnet_scrapping.main()
+                
+            elif site == "FMNAZ":
+                logger.info("Scraping FMNAZ Journal")
+                scraped = fmnaz_scrapping.main()
 
                 
             logger.info(f"Scraped contents from {site} is: {len(scraped)}")
@@ -76,6 +80,8 @@ def start_scraping():
     scrape.contents.extend(scrape.scrape_news("QAD"))
     
     scrape.contents.extend(scrape.scrape_news("FACILIESNET"))
+    
+    scrape.contents.extend(scrape.scrape_news("FMNAZ"))
 
     # Writing to DB
     scrape.write_news_to_db()
