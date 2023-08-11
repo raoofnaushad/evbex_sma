@@ -27,8 +27,8 @@ def scrape_each_article(link):
         heading = article.h1.text
         heading_cleaned = ''.join(letter for letter in heading if letter.isalnum())
         # img_div = article.find('div', class_='elementor-image')
-        img_div = article.find('div', class_='elementor-widget-container')
-        img_src = img_div.find('img')['data-lazy-src']
+        # img_src = img_div.find('img')['data-lazy-src']
+        img_src = article.find('img', class_='attachment-full')['data-lazy-src']
         img_path = user_download(img_src, heading_cleaned)
         
         article_contents = article.find_all('div', class_='aux-modern-heading-description')[:2]
