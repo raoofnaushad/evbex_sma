@@ -202,6 +202,15 @@ def format_fmnaz_date(input_date): #Input "July 28, 2023" -> Output: "2023-07-28
     except ValueError:
         # Handle invalid input format
         return "Invalid input date format"
+    
+def format_fmmedia_date(input_date): #Input "July 28, 2023" -> Output: "2023-07-28
+    try:
+        date_obj = datetime.strptime(input_date, "%d %B %Y")
+        output_date = date_obj.strftime("%Y-%m-%d")
+        return output_date
+    except ValueError:
+        # Handle invalid input format
+        return "Invalid input date format"
 
 def getfilteredContent(list1,list2,highPriorityContent_length,lowPriorityContent_legnth):
     filterd_content=[]
