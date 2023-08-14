@@ -988,8 +988,7 @@ input::selection{
  #toast-container {
     position: fixed;
       bottom: 0;
-      right: 5%;
-      transform: translate(-50%, -50%);
+      right: 3%;
       z-index: 9999;
   }
   /* Styles for the toast */
@@ -1009,3 +1008,8 @@ input::selection{
   .toast.error {
       background-color: #dc3545;
   }
+
+  .region-button:hover:not(.active):not(:disabled) {
+    background: #8a8a8a !important;
+    color: rgb(49, 49, 49) !important;
+}

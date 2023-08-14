@@ -205,7 +205,7 @@ function toggleFunction(region) {
         showToast(`Region switched to ${region}`, 'success')
         setTimeout(()=>{
             window.location.reload();
-        },1500)
+        },750)
     });
     const tabButtons = document.getElementsByClassName('tab-button');
     for (let i = 0; i < tabButtons.length; i++) {
