@@ -292,3 +292,12 @@ def get_priority(contents):
     
     print(json.dumps(new_contents))
     return new_contents
+
+def get_next_link_by_date(links, current_date):
+    start_date = date(2023, 1, 1)
+    # Calculate the day index based on the current date
+    day_index = (current_date - start_date).days % len(links)    
+    # Get the link for the calculated day index
+    next_link = links[day_index]
+    
+    return next_link
