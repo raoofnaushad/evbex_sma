@@ -8,6 +8,8 @@ FMNAZ_LINK="https://www.fmanz.org/news-and-insights/"
 FMMEDIA_AUS_LINK="https://www.fmmedia.com.au/"
 # SERVICECHANNEL_LINK="https://servicechannel.com/resources/blog/"
 SERVICECHANNEL_LINK="https://servicechannel.com/resources/blog/page/2/"
+# POWERGROUP_LINK="https://powergroupintl.com/blogs/"
+CLEANMIDDLEEAST_LINK="https://www.cleanmiddleeast.ae/news/facilities-management"
 
 
 EVBEX_LINK = "https://www.evbex.com/blogs-fm-platform/"

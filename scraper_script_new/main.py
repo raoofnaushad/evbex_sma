@@ -3,7 +3,7 @@
 from src.utils import *
 from src.config import *
 import random
-from scrapers import upkeep_scraping, fmi_scrapping, qad_scrapping, facilio_scrapping, facilitiesnet_scrapping, fmnaz_scrapping, fmmedia_aus_scrapping, servicechannel_scrapping
+from scrapers import cleanmiddleeast_scraping, upkeep_scraping, fmi_scrapping, qad_scrapping, facilio_scrapping, facilitiesnet_scrapping, fmnaz_scrapping, fmmedia_aus_scrapping, servicechannel_scrapping
 
 class Scraper():
     def __init__(self, contents):
@@ -41,6 +41,10 @@ class Scraper():
             elif site == "SERVICECHANNEL":
                 logger.info("Scraping SERVICECHANNEL Journal")
                 scraped = servicechannel_scrapping.main()
+            
+            elif site == "CLEANMIDDLEAST":
+                logger.info("Scraping CLEANMIDDLEAST Journal")
+                scraped = cleanmiddleeast_scraping.main()
 
                 
             logger.info(f"Scraped contents from {site} is: {len(scraped)}")
@@ -81,7 +85,7 @@ def start_scraping():
     ## Scraping UPKEEP
     scrape.contents.extend(scrape.scrape_news("UPKEEP"))
     
-    ## Scraping UPKEEP
+    # Scraping UPKEEP
     scrape.contents.extend(scrape.scrape_news("FACILIO"))
     
     # Scraping QAD
@@ -94,6 +98,8 @@ def start_scraping():
     scrape.contents.extend(scrape.scrape_news("FMMEDIA_AUS"))
     
     scrape.contents.extend(scrape.scrape_news("SERVICECHANNEL"))
+    
+    scrape.contents.extend(scrape.scrape_news("CLEANMIDDLEAST"))
 
     # Writing to DB
     scrape.write_news_to_db()
