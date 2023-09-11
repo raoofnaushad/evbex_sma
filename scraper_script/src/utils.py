@@ -47,7 +47,14 @@ def connect_mong():
 
 def get_html_content(site):
     headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'
+}
+    content = requests.get(site, headers=headers).text
+    return content
+
+def get_html_content_evbex(site):
+    headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'
 }
     content = requests.get(site, headers=headers).text
     return content
@@ -59,7 +66,7 @@ def string_present(str1, str2):
     
 def user_download(url, filename):
     headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'
 }
     r = requests.get(url,headers=headers)
 
@@ -140,20 +147,20 @@ def format_iwfm_date(month, date, year):
     
     return final_date
 
-def getfilteredContent(list1,list2,highPriorityContent_length,lowPriorityContent_legnth):
+def getfilteredContent(max_priority_blogs,min_priority_blogs,highPriorityContent_length,lowPriorityContent_legnth):
     filterd_content=[]
-    if len(list1)>highPriorityContent_length and len(list2)>=lowPriorityContent_legnth:
-        filtered_list_1 = list1[:highPriorityContent_length]
-        filtered_list_2 = list2[:lowPriorityContent_legnth]
+    if len(max_priority_blogs)>highPriorityContent_length and len(min_priority_blogs)>=lowPriorityContent_legnth:
+        filtered_list_1 = max_priority_blogs[:highPriorityContent_length]
+        filtered_list_2 = min_priority_blogs[:lowPriorityContent_legnth]
         filterd_content.extend(filtered_list_1+filtered_list_2)
-    elif (len(list1) > 0):
-        filtered_list_1 = list1
+    elif (len(max_priority_blogs) > 0):
+        filtered_list_1 = max_priority_blogs
         # A total of 5 blogs are there excluding evbex blogs, as his requrement is to show 5 blogs from other Jonor=uals and 2 from evbex
-        left_blog_count = 5 - len(list1) 
-        filtered_list_2 = list2[:left_blog_count]
+        left_blog_count = 5 - len(max_priority_blogs) 
+        filtered_list_2 = min_priority_blogs[:left_blog_count]
         filterd_content.extend(filtered_list_1+filtered_list_2)
     else:
-        total_list = list1+list2
+        total_list = max_priority_blogs+min_priority_blogs
         random.shuffle(total_list)
         filterd_content.extend(total_list[:(highPriorityContent_length+lowPriorityContent_legnth)])
         

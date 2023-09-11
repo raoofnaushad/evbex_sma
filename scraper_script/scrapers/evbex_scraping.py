@@ -68,9 +68,8 @@ def scrape_each_article(link):
 
 def main():
     contents = list()
-    content = get_html_content(EVBEX_LINK)
+    content = get_html_content_evbex(EVBEX_LINK)
     articles = get_article_links(content)
-    
     for article in articles:
         if scrape_each_article(article):
             contents.append(scrape_each_article(article))
